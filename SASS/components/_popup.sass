@@ -1,0 +1,48 @@
+.popup
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    width: 100%
+    overflow: hidden
+    height: 0
+    transition: height .4s ease
+
+    &__box
+        padding: 155px 44px 55px
+        display: flex
+        justify-content: space-between
+        max-width: 1290px
+        width: 100%
+        margin-inline: auto
+        background: linear-gradient(159deg, #FFF -3.3%, #EDEDED 126.16%)
+        border-radius: 40px
+
+    &__item
+        display: flex
+        flex-direction: column
+        gap: 43px
+
+        &:nth-child(2n), &:last-child
+            border-left: 1px solid #E5E5E5
+            padding-left: 84px
+
+    &__link
+        display: flex
+        align-items: center
+        gap: 12px
+
+        svg
+            width: 25px
+            height: 25px
+
+        span
+            @include fontStyle(20px, 600, 100%)
+            color: $color-black
+            text-transform: uppercase
+            letter-spacing: 0.6px
+
+    &.is_active
+        height: 371px

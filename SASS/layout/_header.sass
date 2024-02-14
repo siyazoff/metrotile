@@ -1,0 +1,101 @@
+.header 
+    position: fixed
+    width: 100%
+    top: 14px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 999
+    
+    display: flex
+
+    &__box
+        height: 96px
+        border-radius: 20px
+        max-width: 1290px
+        width: 100%
+        margin-inline: auto
+        filter: $drop-shadow
+        background-color: $color-white
+        user-select: none
+
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        position: relative
+        z-index: 2
+
+    &__burger
+        display: flex
+        flex-direction: column
+        gap: 8px
+        cursor: pointer
+
+        span
+            width: 32px
+            height: 1px
+            background: $color-black
+            transition: transform .3s ease, opacity .3s ease
+
+        &.is_active
+            span
+                &:first-child
+                    transform: translateY(9px) rotate(45deg)
+
+                &:nth-child(2n)
+                    opacity: 0
+                &:last-child
+                    transform: translateY(-9px) rotate(-45deg)
+    
+    &__map
+        display: flex
+        align-items: center
+        gap: 13px
+
+        img
+            height: 70px
+            width: 70px
+            object-fit: contain
+
+        span
+
+
+    &__call
+        display: flex
+        gap: 11px
+
+        p
+            display: flex
+            flex-direction: column
+            gap: 5px
+
+        span
+            font-size: 18px
+            font-weight: 500
+            color: $color-black
+
+            &.hot-line-text
+                color: $color-gray
+                font-size: 13px
+                font-weight: 400
+
+    &__language
+        display: flex
+        align-items: center
+        background: $color-main
+        gap: 7px
+        padding: 12px
+        border-radius: 10px
+
+        .language__line
+            width: 1px
+            height: 21px
+            background: rgba(255, 255, 255, 0.20)
+
+        a
+            @include fontStyle(15px, 700, 22px)
+            color: $color-white
+            &.secondary_language
+                font-weight: 400
+                opacity: .4
+
+
