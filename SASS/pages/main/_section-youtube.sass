@@ -1,0 +1,114 @@
+.section-youtube
+    position: relative
+    background-image: url(/src/img/section-youtube-bg.webp)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 91px 0 90px
+
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background: #262626CC
+        top: 0
+        left: 0
+
+    .container
+        position: relative
+        z-index: 1
+
+    &__title
+        color: $color-white
+
+    &__box
+        margin-top: 33px
+        display: flex
+        justify-content: center
+        gap: 70px
+
+        iframe
+            max-width: 528px
+            width: 100%
+            height: 374px
+            border-radius: 20px
+
+    &__content
+        max-width: 604px
+        width: 100%
+
+        h2
+            @include fontStyle(30px, 600, 43px)
+            color: $color-white
+            text-transform: uppercase
+            margin-top: 21px
+
+        p
+            @include fontStyle(20px, 400, 26px)
+            color: $color-white
+            margin-top: 30px
+
+    &__btns
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 20px
+        row-gap: 17px
+        margin-top: 32px
+        max-width: 488px
+
+    &__btn
+        &:link, &:visited
+            padding: 18px 0 12px
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 10px
+            @inlude fontStyle(16px, 600, normal)
+            color: $color-main
+            background: $color-white
+            border-radius: 10px
+            border: 1px solid $color-white
+        &:last-child
+            grid-column: span 2
+        &:nth-child(2)
+            background: rgba(255, 255, 255, .2)
+            color: $color-white
+
+
+        svg
+            transform: translateY(-2px)
+
+    &__swiper
+        height: 100%
+        width: 100%
+        overflow: hidden
+
+    &__swiper-prev, &__swiper-next
+        position: absolute
+        top: 57%
+        z-index: 10
+        cursor: pointer
+        transition: transform .2s ease
+
+        &:hover
+            transform: scale(1.1)
+
+    &__swiper-prev
+        left: -30px
+
+    &__swiper-next
+        right: -30px
+
+    &__swiper-pagination
+        bottom: -50px
+        top: unset !important
+        max-width: 1200px
+        left: 50% !important
+        transform: translateX(-50%)
+        border-radius: 50px
+        overflow: hidden
+        height: 3px !important
+
+        span
+            background: $color-white !important

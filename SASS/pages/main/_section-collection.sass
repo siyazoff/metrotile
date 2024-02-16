@@ -1,0 +1,200 @@
+.section-collection
+    position: relative
+    padding: 85px 0 46px
+
+    &__swiper
+        width: 100%
+        height: 545px
+        overflow: hidden
+        border-radius: 20px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 20px
+
+    &__thumbs
+        width: 100%
+        max-width: 445px
+        height: 205px
+        margin-bottom: 40px
+        user-select: none
+
+        .swiper-slide
+            height: 53px
+            cursor: pointer
+            overflow: visible
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 8px
+            outline: 2px solid $color-white
+            outline-offset: 6px
+            outline-radius: 8px
+            transition: outline .2s ease-in-out
+            transform: scale(-1, 1)
+
+        .swiper-slide-thumb-active
+            img
+                outline: 2px solid #04A756
+
+    &__heading
+        margin-bottom: 41px
+        display: inline-block
+        position: relative
+
+        &::after
+            content: ''
+            width: 35px
+            height: 1px
+            background: #151515
+            position: absolute
+            bottom: 0
+            left: 0
+
+    &__desc
+        margin-bottom: 28px
+
+    &__color-solution
+        margin-bottom: 15px
+
+
+
+
+.collection-sides-box
+    width: 100%
+    display: flex
+
+    &__left
+        width: 50%
+        padding-top: 20px
+        padding-left: 15px
+    &__right
+        width: 50%
+
+    &__swiper
+        overflow: hidden
+
+    &__slide
+        opacity: 0 !important
+        transition: opacity .5s ease
+
+        &.swiper-slide-active
+            opacity: 1 !important
+
+    
+.collection-tabs
+    position: relative
+    &__thumbs
+        overflow: hidden
+        padding-bottom: 68px
+        padding-top: 20px
+
+
+    &__slide
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 8.5px
+        cursor: pointer
+        user-select: none
+        span
+            @include fontStyle(20px, 700, 120%)
+            color: $color-black
+            position: relative
+
+
+            &::before
+                content: ''
+                position: absolute
+                background: $color-black
+                height: 1px
+                width: 0
+                bottom: 0
+                left: 50%
+                transform: translateX(-50%)
+                transition: width .3s ease-in-out
+        &:hover
+            .collection-tabs__img-wrapper
+                transform: scale(1.1)
+
+            span
+                &::before
+                    width: 95%
+
+    &__img-wrapper
+        width: 95px
+        height: 95px
+        transition: transform .2s ease-in-out
+        overflow: hidden
+        border-radius: 50%
+        
+        img
+            width: 100%
+            height: 100%   
+            object-fit: cover
+                
+    .swiper-slide-thumb-active
+        .collection-tabs__img-wrapper
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                width: 100%
+                height: 100%
+                border-radius: 50%
+                z-index: 1
+                background: linear-gradient(107deg, #04A756 -3.51%, rgba(4, 167, 157, 0.40) 106.06%)
+
+            &::after
+                content: ''
+                position: absolute
+                top: 0
+                bottom: 0
+                z-index: 1
+                width: 100%
+                height: 100%
+                background-repeat: no-repeat
+                background-position: center
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='41' viewBox='0 0 42 41' fill='none'%3E%3Ccircle cx='21.0473' cy='20.4527' r='20.4527' transform='rotate(90 21.0473 20.4527)' fill='white'/%3E%3Cpath d='M20.2686 28.7675C20.6984 29.1974 21.3953 29.1974 21.8252 28.7675L28.8298 21.7629C29.2597 21.333 29.2597 20.6361 28.8298 20.2063C28.4 19.7764 27.7031 19.7764 27.2732 20.2063L21.0469 26.4326L14.8205 20.2063C14.3907 19.7764 13.6938 19.7764 13.2639 20.2063C12.8341 20.6361 12.8341 21.333 13.2639 21.7629L20.2686 28.7675ZM19.9462 10.2842L19.9462 27.9892L22.1476 27.9892L22.1476 10.2842L19.9462 10.2842Z' fill='%2304A756'/%3E%3C/svg%3E")
+
+        span
+            color: #04A756
+            &::before
+                width: 95%
+                background-color: #04A756
+
+    &__pagination
+        top: unset !important
+        bottom: 30px !important
+        height: 3px !important
+        border-radius: 50px !important
+        overflow: hidden
+
+        span
+            background: $color-main !important
+            border-radius: 50px !important
+
+    &-next, &-prev
+        position: absolute
+        top: 34%
+        transform: translateY(-50%)
+        cursor: pointer
+        transition: transform .2s ease-in-out
+
+    &-next
+        right: -40px
+        &:hover
+            transform: translateY(-50%) scale(1.2)
+        &:active
+            transform: translateY(-50%) scale(1)
+
+    &-prev
+        left: -40px
+        &:hover
+            transform: translateY(-50%) scale(1.2)
+
+        &:active
+            transform: translateY(-50%) scale(1)

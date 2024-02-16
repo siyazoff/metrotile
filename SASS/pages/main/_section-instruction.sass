@@ -1,0 +1,45 @@
+.section-instruction
+    position: relative
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 48%
+        height: 100%
+        z-index: -1
+        background: linear-gradient(83deg, #04A756 0.98%, rgba(4, 167, 106, 0.83) 58.57%, rgba(4, 167, 157, 0.40) 120.39%)
+   
+    &__bg
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transform: scale(-1, 1)
+        object-position: top
+        z-index: -1
+        
+    &__box
+        padding: 67px 53px 65px 90px
+        width: 47%
+        margin-left: auto
+
+    &__heading
+        color: $color-white
+        margin-bottom: 11px
+
+    &__desc
+        @include fontStyle(20px, 400, 26px)
+        color: $color-white
+        margin-bottom: 34px
+
+    &__btn
+        &:link, &:visited
+            background: $color-white
+            color: $color-main
+            gap: 13px
+
+    

@@ -1,0 +1,87 @@
+.main-form
+    background: linear-gradient(83deg, #04A756 0.98%, rgba(4, 167, 106, 0.83) 58.57%, rgba(4, 167, 157, 0.40) 120.39%)
+    background-size: cover
+    background-position: center
+    width: 57%
+    padding: 109px 43px 90px 45px
+
+
+    &__title
+        @include fontStyle(45px, 600, 120%)
+        color: $color-white
+        text-transform: uppercase
+        margin-bottom: 10px
+
+    &__subtitle
+        @include fontStyle(35px, 400, 120%)
+        color: $color-white
+        text-transform: uppercase
+        margin-bottom: 22px
+
+    &__desc
+        @include fontStyle(22px, 400, 120%)
+        color: $color-white
+        margin-bottom: 33px
+
+
+    &__form
+        width: 100%
+        max-width: 526px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 15px
+        row-gap: 16px
+
+        input
+            background: rgba(255, 255, 255, 0.10)
+            border-radius: 10px
+            border: 1px solid #F8F8F8
+            padding: 15px 17px
+            color: $color-white
+            @include fontStyle(15px, 400 ,20px)
+
+            &:focus
+                outline: none
+
+            &:nth-child(3)
+                grid-column: span 2
+            &::-webkit-input-placeholder
+                color: $color-white
+                opacity: 1
+            &::-moz-placeholder
+                color: $color-white
+                opacity: 1
+            &:-ms-input-placeholder
+                color: $color-white
+                opacity: 1
+            &:-moz-placeholder
+                color: $color-white
+                opacity: 1
+
+                
+    &__wrapper-submit
+        margin-top: 36px
+        display: flex
+        gap: 35px
+        grid-column: span 2
+        align-items: center
+
+    &__submit-btn
+        flex-shrink: 0
+        border: none
+        border-radius: 10px
+        padding: 18px 30px 17px 30px
+        background: $color-white
+        color: $color-main
+        @include fontStyle(16px, 600, 100%)
+        letter-spacing: 0.32px
+        display: flex
+        justify-content: center
+        gap: 19px
+        cursor: pointer
+
+   
+
+    &__consent-personal-data
+        @include fontStyle(13px, 300, 120%)
+        color: $color-white

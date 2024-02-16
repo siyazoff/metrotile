@@ -1,11 +1,24 @@
 .button
     &:link, &:visited
+        display: inline-flex
+        gap: 9px
+        align-items: center
         background: $color-main
         color: $color-white
-        padding: 15px 32px
+        padding: 15px 32px 13px
         border-radius: 10px
         @include fontStyle(16px, 600, normal)
         transition: background-color .3s ease
+        user-select: none
+        text-transform: uppercase
 
-    &:hover
-        background: #04a756d4
+    svg
+        transform: translateY(-1.5px)
+
+
+    &_stock
+        &:link, &:visited
+            background: $color-orange
+            border-radius: 52px
+            @include fontStyle(17px, 700, 120%)
+            padding: 8px 30px 6px
