@@ -1287,4 +1287,20 @@ main.main {
 }
 .section-cooperation__item:hover img {
   transform: scale(1.1);
+}
+
+.section-factory {
+  padding: 50px 0 38px;
+}
+.section-factory__heading {
+  text-align: center;
+}
+.section-factory__box {
+  margin-top: 38px;
+  display: flex;
+  gap: 40px;
+}
+.section-factory__left {
+  max-width: 630px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
