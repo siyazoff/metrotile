@@ -1,0 +1,41 @@
+.faq    
+    border-radius: 14px
+    border: 1px solid $color-main
+    background: #F5F5F5
+    padding: 20px 33px 20px 30px
+    font-family: $proximasoft
+    cursor: pointer
+
+    &__head
+        display: flex
+        gap: 20px
+        align-items: center
+
+    &__minus-plus
+        span
+            width: 13px
+            height: 2.5px
+            background: $color-main
+            border-radius: 10px
+            display: block
+
+            &:last-child
+                transform: translateY(-2.4px) rotate(90deg)
+
+
+    &__title
+        @include fontStyle(20px, 600, 30px)
+        color: $color-black
+        text-transform: uppercase
+
+    &__body
+        padding-left: 32px
+        overflow: hidden
+        max-height: 0
+        transition: max-height 0.2s ease-out
+
+    &__desc
+        color: #666
+        @include fontStyle(20px, 400, 28px)
+        margin-top: 22px
+        margin-bottom: 5px

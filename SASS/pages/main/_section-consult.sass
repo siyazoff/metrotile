@@ -1,0 +1,69 @@
+.section-consult
+    padding: 48px 0 100px
+
+    &__left-img
+        width: 47%
+        height: 594px
+        object-fit: cover
+        border-top-right-radius: 20px
+        border-bottom-right-radius: 20px
+        float: left
+
+    &__box
+        padding: 29px 0 40px 81px
+        display: flex
+        flex-direction: column
+
+    &__title
+        @include fontStyle(40px, 600, 120%)
+        color: $color-black
+        text-transform: uppercase
+        margin-bottom: 22px
+
+    &__desc
+        @include fontStyle(20px, 300, 130%)
+        color: $color-black
+        margin-bottom: 35px
+
+    &__form
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 15px
+
+        input
+            padding: 16px 17px 14px 
+            border: 1px solid #E1E1E1
+            border-radius: 10px
+            background: transparent
+            font-size: 15px
+            font-weight: 400
+            line-height: 20px
+
+            &:focus
+                outline: none
+
+        textarea
+            grid-column: span 2
+            padding: 20px 17px
+            border-radius: 10px
+            border: 1px solid #E1E1E1
+            background: transparent
+            font-size: 15px
+            font-weight: 400
+            line-height: 20px
+            resize: none
+            &:focus
+                outline: none
+
+    &__consent
+        @include fontStyle(13px, 300, 20px)
+        color: $color-black
+        margin-top: 10px
+        padding: 7px
+        margin-left: -40px
+
+    &__submit
+        background: $color-main
+        color: $color-white
+        margin-top: 10px
+        max-width: 240px

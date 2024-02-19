@@ -98,3 +98,17 @@ const youtubeSwiper = new Swiper(".section-youtube__swiper", {
     prevEl: ".section-youtube__swiper-prev",
   },
 });
+
+const newsSwiper = new Swiper(".section-news__swiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  speed: 800,
+  pagination: {
+    el: ".section-news__swiper-pagination",
+    type: "progressbar",
+  },
+  navigation: {
+    nextEl: ".section-news__swiper-next",
+    prevEl: ".section-news__swiper-prev",
+  },
+});

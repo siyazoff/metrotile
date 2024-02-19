@@ -8,4 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
     this.classList.toggle("is_active");
     popup.classList.toggle("is_active");
   }
+
+  const faq = document.querySelectorAll(".faq");
+
+  faq.forEach((el) => {
+    el.addEventListener("click", function () {
+      this.classList.toggle("active");
+      let faqBody = this.querySelector(".faq__body");
+      if (faqBody.style.maxHeight) {
+        faqBody.style.maxHeight = null;
+      } else {
+        faqBody.style.maxHeight = faqBody.scrollHeight + "px";
+      }
+    });
+  });
 });

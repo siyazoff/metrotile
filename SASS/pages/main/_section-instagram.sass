@@ -1,0 +1,95 @@
+.section-instagram
+    padding: 30px 0 115px
+    position: relative
+
+    &__box
+        background: linear-gradient(83deg, #04A756 0.98%, rgba(4, 167, 106, 0.83) 58.57%, rgba(4, 167, 157, 0.40) 120.39%)
+        border-radius: 20px
+        padding: 70px 0 75px 117px
+        position: relative
+
+    &__heading
+        color: $color-white
+        margin-bottom: 19px
+
+    &__desc
+        @include fontStyle(25px, 400, 30px)
+        color: $color-white
+        margin-bottom: 36px
+
+    &__link
+        display: flex
+        gap: 15px
+        align-items: center
+
+        img
+            margin-right: 7px
+            width: 48px
+            height: 48px
+
+        span
+            color: $color-white
+            font-size: 30px
+            font-weight: 600
+            line-height: 64px
+            text-decoration-line: underline
+
+    &__iphones
+        position: absolute
+        right: 75px
+        max-width: 507px
+        width: 100%
+        top: -60px
+        z-index: 0
+
+    &__inst-icon-fly-left,
+    &__inst-icon-fly-right,
+    &__like-icon-fly-right,
+    &__like-icon-fly-left
+        position: absolute
+
+    &__inst-icon-fly-left
+        top: 41px
+        right: 485px
+        width: 110px
+        height: 110px
+        animation: floating 1.5s ease-in-out infinite
+   
+    &__like-icon-fly-right
+        top: 9px
+        right: 23px
+        width: 113px
+        height: 123px
+        transform: scale(-1, 1)
+        animation: floatingHaveTransform 3s ease-in-out infinite
+
+    &__inst-icon-fly-right
+        bottom: 7px
+        right: 110px
+        width: 84px
+        height: 84px
+        transform: scale(-1, 1)
+        animation: floatingHaveTransform 2s ease-in-out infinite
+
+    &__like-icon-fly-left
+        bottom: 49px
+        right: 550px
+        width: 95px
+        height: 103px
+        animation: floating 4s ease-in-out infinite
+
+@keyframes floating 
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(-10px)
+  100%
+    transform: translateY(0)
+
+@keyframes floatingHaveTransform
+  0%
+    transform: scale(-1, 1) translateY(0)
+  50%
+    transform: scale(-1, 1) translateY(-10px)
+  100%
+    transform: scale(-1, 1) translateY(0)
