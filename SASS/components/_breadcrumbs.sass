@@ -1,0 +1,16 @@
+.breadcrumbs
+    margin-top: 160px
+
+    &__box
+        display: flex
+        gap: 10px
+        @include fontStyle(13px, 400, 23px)
+        text-transform: uppercase
+        color: $color-black
+
+        a
+            opacity: .5
+            color: $color-black
+            transition: opacity .3s ease
+            &:hover
+                opacity: 1

@@ -1,0 +1,24 @@
+.section-catalog
+    position: relative
+    padding: 62px 0 71px
+
+    &__tabs
+        display: flex
+        gap: 20px
+        margin-top: 30px
+        margin-bottom: 50px
+
+    &__tab
+        padding: 18px 47px
+        border-radius: 12px
+        background: #04A7561A
+        @include fontStyle(18px, 700, 24px)
+        color: $color-main
+
+        &.active
+            background: $color-main
+            color: $color-white
+
+    &__box
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
