@@ -22,4 +22,23 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  const inputProductCounter = document.querySelector("input.input-counter");
+  const minusButtonProduc = document.querySelector(".minus-product");
+  const plusButtonProduc = document.querySelector(".plus-product");
+
+  minusButtonProduc.addEventListener("click", function () {
+    if (inputProductCounter.value > inputProductCounter.min) {
+      inputProductCounter.value--;
+    }
+  });
+
+  plusButtonProduc.addEventListener("click", function () {
+    if (
+      inputProductCounter.value < inputProductCounter.max ||
+      !inputProductCounter.max
+    ) {
+      inputProductCounter.value++;
+    }
+  });
 });

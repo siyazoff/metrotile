@@ -56,7 +56,7 @@ const collectionThumbs = new Swiper(".section-collection__thumbs", {
   },
 });
 
-const buildSwiperCollection= (sliderElm) => {
+const buildSwiperCollection = (sliderElm) => {
   let sliderIdentifier = sliderElm.dataset.id;
 
   return new Swiper(`.section-collection__swiper-${sliderIdentifier}`, {
@@ -80,7 +80,9 @@ const buildSwiperCollection= (sliderElm) => {
   });
 };
 
-const allCollectionSliders = document.querySelectorAll(".section-collection__swiper");
+const allCollectionSliders = document.querySelectorAll(
+  ".section-collection__swiper"
+);
 
 allCollectionSliders.forEach((slider) => buildSwiperCollection(slider));
 
@@ -113,8 +115,7 @@ const newsSwiper = new Swiper(".section-news__swiper", {
   },
 });
 
-
-const buildSwiperCatalog= (sliderElm) => {
+const buildSwiperCatalog = (sliderElm) => {
   let sliderIdentifier = sliderElm.dataset.id;
 
   return new Swiper(`.catalog-item__swiper-${sliderIdentifier}`, {
@@ -132,3 +133,36 @@ const buildSwiperCatalog= (sliderElm) => {
 const allCatalogSliders = document.querySelectorAll(".catalog-item__swiper");
 
 allCatalogSliders.forEach((slider) => buildSwiperCatalog(slider));
+
+const productSwiperThumbs = new Swiper(".section-product__thumbs", {
+  slidesPerView: 4,
+  spaceBetween: 27,
+  watchSlidesProgress: true,
+  grid: {
+    rows: 2,
+    fill: "row",
+  },
+});
+
+const productColorNameSwiper = new Swiper(
+  ".section-product__swiper-color-name",
+  {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 800,
+    direction: "vertical",
+    allowTouchMove: false,
+  }
+);
+
+const productImgSwiper = new Swiper(".section-product__swiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  speed: 800,
+  thumbs: {
+    swiper: productSwiperThumbs,
+  },
+  controller: {
+    control: productColorNameSwiper,
+  },
+});

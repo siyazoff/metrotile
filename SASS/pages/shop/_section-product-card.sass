@@ -1,0 +1,162 @@
+.section-product
+    padding-bottom: 91px
+
+    &__tabs
+        margin-top: 24px
+        margin-bottom: 63px
+
+    &__box
+        display: grid
+        padding: 47px 56px 39px 52px
+        border: 1px solid #E4E4E4
+        border-radius: 10px
+        grid-template-columns: repeat(2, 1fr)
+        margin-bottom: 42px
+
+    &__left
+        width: 100%
+        max-width: 578px
+        height: 555px
+
+    &__swiper
+        border-radius: 10px
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 10px
+
+    &__right
+        max-width: 477px
+        width: 100%
+        height: fit-content
+        margin-left: auto
+
+
+    &__title
+        @include fontStyle(35px, 700, 30px)
+        color: $color-black
+        text-transform: uppercase
+        margin-bottom: 9px
+        margin-top: 30px
+
+    &__subtitle
+        @include fontStyle(16px, 400, 120%)
+        color: $color-black
+
+    &__line
+        width: 100%
+        height: 1.4px
+        background: #D7D7D7
+        margin-top: 19px
+        margin-bottom: 18px
+
+    &__color
+        display: flex
+        h3
+            @include fontStyle(20px, 700, 120%)
+            color: $color-black
+
+            &.choose-color
+                width: 31%
+
+    &__swiper-color-name
+        width: fit-content
+        height: 30px
+        overflow: hidden
+
+    &__thumbs
+        padding-top: 22px
+        width: 100%
+        max-width: 422px
+        height: 100%
+
+        .swiper-slide
+            height: 85px
+            cursor: pointer
+
+            img
+                border-radius: 10px
+                width: 100%
+                height: 100%
+                object-fit: cover
+                transition: outline .1s ease-in-out
+
+            &.swiper-slide-thumb-active
+                img
+                    outline: 2.2px solid $color-black
+                    outline-offset: 2.5px
+
+    &__price
+        margin-top: 28px
+        font-family: $proximasoft
+        h3
+            @include fontStyle(15px, 500, normal)
+            color: #888
+            text-transform: lowercase
+            &:nth-child(2)
+                @include fontStyle(30px, 700, normal)
+                color: $color-black
+                margin-top: 13px
+
+    &__btns
+        display: flex
+        margin-top: 24px
+        gap: 13px
+
+    &__count
+        display: flex
+        border-radius: 10px
+        border: 1px solid #BDBDBD
+        padding: 10px
+        gap: 20px
+
+        input
+            background: transparent
+            border: none
+            outline: none
+            appearance: none
+            color: #444444
+            @include fontStyle(23px, 600, normal)
+            width: 30px
+            text-align: center
+            -moz-appearance: textfield
+
+            &::-webkit-inner-spin-button, &::-webkit-outer-spin-button 
+                appearance: none
+                -webkit-appearance: none
+
+        button
+            background: transparent
+            outline: none
+            border: none
+            color: #444444
+            @include fontStyle(23px, 400, normal)
+            cursor: pointer
+
+    &__add-to-card
+        background: $color-main
+        cursor: pointer
+        outline: none
+        border: none
+        border-radius: 10px
+        display: flex
+        align-items: center
+        gap: 2.3px
+        padding: 0 27px 0 20px
+        @include fontStyle(16px, 700, normal)
+        color: $color-white
+        letter-spacing: 0.32px
+
+    &__description
+        grid-column: span 2
+        margin-top: 40px
+        @include fontStyle(20px, 400, 26px)
+        color: #444
+
+    &__docs
+        margin-top: 42px
