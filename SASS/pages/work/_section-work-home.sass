@@ -1,0 +1,55 @@
+.section-work-home
+    background-image: url(/src/img/work-1.webp)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    border-bottom-left-radius: 40px
+    border-bottom-right-radius: 40px
+    padding: 209px 0 45px
+    position: relative
+    overflow: hidden
+    z-index: 1
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(90deg, rgba(38, 38, 38, 0.55) 21%, rgba(38, 38, 38, 0.00) 100%)
+        z-index: -1
+
+
+    &__breadcrumbs
+        margin: 0
+
+        .breadcrumbs__box
+            color: $color-white
+            a
+                color: $color-white
+
+    &__title
+        @include fontStyle(70px, 600, 75px)
+        color: $color-white
+        margin-top: 88px
+        margin-bottom: 13px
+
+    &__subtitle
+        @include fontStyle(17px, 400, 24px)
+        text-transform: uppercase
+        letter-spacing: 0.85px
+        color: $color-white
+        margin-bottom: 75px
+
+    &__more-down
+        width: fit-content
+        display: flex
+        align-items: center
+        gap: 16px
+        color: $color-white
+        font-size: 17px
+        font-weight: 400
+        line-height: 24px
+        letter-spacing: 1.7px
+        text-transform: uppercase
