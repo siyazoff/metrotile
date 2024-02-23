@@ -166,3 +166,40 @@ const productImgSwiper = new Swiper(".section-product__swiper", {
     control: productColorNameSwiper,
   },
 });
+
+const historyThumbs = new Swiper(".swiper-history__thumbs", {
+  slidesPerView: 9,
+  spaceBetween: 86,
+  watchSlidesProgress: true,
+  centeredSlides: true,
+  speed: 800,
+});
+
+const historyContentSwiper = new Swiper(".swiper-history-content", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  speed: 800,
+  allowTouchMove: false,
+  controller: {
+    control: historyThumbs,
+  },
+});
+
+const historyImgSwiper = new Swiper(".swiper-history-img", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  speed: 800,
+  allowTouchMove: false,
+  initialSlide: 4,
+  thumbs: {
+    swiper: historyThumbs,
+  },
+
+  navigation: {
+    nextEl: ".swiper-history__next",
+    prevEl: ".swiper-history__prev",
+  },
+  controller: {
+    control: historyContentSwiper,
+  },
+});

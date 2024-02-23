@@ -1,0 +1,168 @@
+.section-production-home
+    background-image: url(/src/img/production-home.webp)
+
+
+.section-production
+    padding: 90px 0 35px
+    &__tabs
+        margin-top: 0
+
+    &__box-history
+        position: relative
+        margin-top: 20px
+        &::after
+            content: ''
+            position: absolute
+            top: -30px
+            left: 30px
+            width: 100%
+            max-width: 275px
+            height: 230px
+            border-radius: 15px
+            background: #EFEFEF
+            z-index: -1
+
+
+.swiper-history
+    position: relative
+    width: 100%
+    overflow: hidden
+
+    &__box
+        display: flex
+        justify-content: center
+        gap: 85px
+
+    &-img
+        max-width: 545px
+        width: 100%
+        overflow: hidden
+        height: 460px
+        border-radius: 15px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 15px
+
+    &-content
+        padding-top: 40px
+        max-width: 521px
+        width: 100%
+        overflow: hidden
+        height: fit-content
+
+    &__title
+        margin-bottom: 10px
+        color: $color-black
+        font-size: 35px
+        font-weight: 600
+        line-height: 64px
+
+    &__desc
+        color: #555
+        font-family: $proximasoft
+        font-size: 18px
+        font-weight: 400
+        line-height: 24px
+
+    &__navi
+        display: flex
+        gap: 15px
+        align-items: center
+        margin-top: 17px
+
+        svg
+            width: 32px
+            height: 32px
+
+    &__between-btn-line
+        height: 10px
+        width: 1.3px
+        background: #C2C2C2
+
+    &__prev, &__next
+        height: 32px
+        cursor: pointer
+
+    &__slide
+        background: $color-white
+
+    &__thumbs
+        margin-top: 38px
+        max-width: 1181px
+        margin-inline: auto
+        overflow: hidden
+        position: relative
+        z-index: 1
+        .swiper-slide
+            &.swiper-slide-thumb-active
+                .history-thumb__circle
+                    background: #04A756
+                    width: 24px
+                    height: 24px
+                    margin-top: 0
+                .history-thumb__circle-active
+                    width: 10px
+                    height: 10px
+                .history-thumb__year
+                    color: #04A756
+                    font-size: 35.25px
+                    line-height: 47px
+
+        &::after
+            content: ''
+            position: absolute
+            top: 12px
+            left: 0
+            width: 100%
+            height: 1px
+            background: #E0E0E0
+            z-index: -1
+
+
+.history-thumb
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__circle
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background: #555
+        margin-bottom: 11px
+        transition: all .3s ease-in-out
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 5px
+
+        &-active
+            width: 0
+            height: 0
+            border-radius: 50%
+            background: white
+            transition: all .3s ease-in-out
+
+    &__year
+        color: #555
+        text-align: center
+        font-size: 24px
+        font-weight: 600
+        line-height: 32px
+        transition: all .3s ease-in-out
+
+
+.section-production-youtube
+    padding: 35px 0 45px
+
+    &__box
+        border-radius: 15px
+        height: 519px
+        overflow: hidden
+
+        iframe
+            width: 100%
+            height: 100%
