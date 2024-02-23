@@ -2387,4 +2387,115 @@ main.main {
   line-height: 24px;
   letter-spacing: 1.7px;
   text-transform: uppercase;
+}
+
+.section-work {
+  padding: 90px 0 105px;
+  position: relative;
+}
+.section-work__tabs {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  border: none;
+}
+.section-work__tabs a {
+  padding: 18px 47px;
+  margin: 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #04A756;
+  background: rgba(4, 167, 86, 0.1019607843);
+}
+.section-work__tabs a[role=tab]:hover:not([aria-selected=true]), .section-work__tabs a[role=tab][aria-selected=true] {
+  border: none;
+}
+.section-work__tabs a[role=tab][aria-selected=true] {
+  background: #04A756;
+  color: #fff;
+}
+.section-work__box {
+  margin-top: 57px;
+}
+.section-work__tab-content {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 27px;
+}
+.section-work__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  padding: 20px 20px 17px 33px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 423px;
+  cursor: pointer;
+}
+.section-work__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #282828 0%, rgba(40, 40, 40, 0) 100%);
+  z-index: -2;
+}
+.section-work__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #04A756 -18.31%, rgba(4, 167, 106, 0.83) 35.72%, rgba(4, 167, 157, 0.4) 93.72%);
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.section-work__item:hover::before {
+  opacity: 1;
+}
+.section-work__item:hover img {
+  transform: scale(1.2);
+}
+.section-work__item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.section-work__item .arrow {
+  margin-left: auto;
+}
+.section-work__item-title {
+  margin-top: auto;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 9px;
+}
+.section-work__item-city {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.section-work__item {
+  grid-column: span 3;
+}
+.section-work__item_bigger {
+  grid-column: span 5;
 }/*# sourceMappingURL=style.css.map */
