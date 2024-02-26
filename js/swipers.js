@@ -203,3 +203,17 @@ const historyImgSwiper = new Swiper(".swiper-history-img", {
     control: historyContentSwiper,
   },
 });
+
+const swiperProductionBest = new Swiper(".swiper-production-best", {
+  slidesPerView: 1,
+  spaceBetween: 40,
+  speed: 800,
+
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-production-best__pagination",
+  },
+});

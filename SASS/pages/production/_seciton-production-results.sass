@@ -1,0 +1,43 @@
+.seciton-production-results
+    padding: 50px 0 100px
+    position: relative
+
+    &__box
+        display: flex
+        gap: 100px
+
+    &__left
+        display: flex
+        flex-direction: column
+        gap: 13px
+        max-width: 616px
+        padding-top: 75px
+
+        p
+            font-family: $proximasoft
+            color: #555
+
+    &__right
+        width: 100%
+        height: auto
+        padding-top: 30px
+        position: relative
+        
+        &::after
+            content: ""
+            position: absolute
+            top: 0px
+            right: -30px
+            width: 100%
+            max-width: 275px
+            height: 230px
+            border-radius: 15px
+            background: #EFEFEF
+            z-index: -1
+
+        img
+            width: 100%
+            min-height: 582px
+            height: 100%
+            object-fit: cover
+            border-radius: 15px

@@ -1,6 +1,9 @@
 .section-production-advantages
     padding: 45px 0 109px
 
+    &-3
+        padding: 45px 0 40px
+
     &__box
         display: grid
         grid-template-columns: repeat(2, 1fr)
@@ -8,6 +11,10 @@
         margin-top: 27px
         column-gap: 53px
         row-gap: 28px
+
+        &_leader
+            column-gap: 80px
+            grid-template-rows: unset
 
 
 .production-advantages
@@ -47,3 +54,26 @@
     &:nth-child(3)
         img
             height: 263px
+
+    &__side
+        display: flex
+        flex-direction: column
+        gap: 50px
+
+    &_leader
+        &-1
+            img
+                height: 398px
+
+        &-2
+            border-bottom: none
+            img
+                height: 584px !important
+
+        &-3
+            img
+                height: 638px
+        &-4
+            border-bottom: none
+            img
+                height: 428px !important
