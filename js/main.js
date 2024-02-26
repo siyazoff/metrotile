@@ -42,3 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+window.addEventListener("scroll", function () {
+  var elements = document.querySelectorAll(".background-change");
+  elements.forEach(function (element) {
+    if (window.scrollY >= 2815) {
+      element.style.backgroundAttachment = "unset";
+      element.style.backgroundPosition = "46.5% 50%";
+    } else {
+      element.style.backgroundAttachment = "fixed";
+      element.style.backgroundPosition = "47% 50%";
+    }
+  });
+});
