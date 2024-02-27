@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("scroll", function () {
   var elements = document.querySelectorAll(".background-change");
   elements.forEach(function (element) {
-    if (window.scrollY >= 2815) {
+    if (window.scrollY >= 2891) {
       element.style.backgroundAttachment = "unset";
       element.style.backgroundPosition = "46.5% 50%";
     } else {
