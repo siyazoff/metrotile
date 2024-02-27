@@ -9,6 +9,9 @@
         border: none
         font-family: $noto-sans
 
+        li
+            flex-shrink: 0
+
         a
             &[role="tab"]:hover:not([aria-selected="true"]), &[role="tab"][aria-selected="true"]
                 border: none
@@ -21,6 +24,7 @@
             line-height: 24px
             color: $color-main
             background: #04A7561A
+            display: inline-block
 
             &[role="tab"][aria-selected="true"]
                 background: $color-main

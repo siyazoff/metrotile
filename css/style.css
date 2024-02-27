@@ -2408,6 +2408,9 @@ main.main {
   border: none;
   font-family: "NotoSans";
 }
+.section-work__tabs li {
+  flex-shrink: 0;
+}
 .section-work__tabs a {
   padding: 18px 47px;
   margin: 0;
@@ -2418,6 +2421,7 @@ main.main {
   line-height: 24px;
   color: #04A756;
   background: rgba(4, 167, 86, 0.1019607843);
+  display: inline-block;
 }
 .section-work__tabs a[role=tab]:hover:not([aria-selected=true]), .section-work__tabs a[role=tab][aria-selected=true] {
   border: none;
@@ -3198,4 +3202,21 @@ main.main {
 }
 .section-cooperation-form__inner {
   background-image: url("/src/img/cooperation-form-1.webp");
+}
+
+.section-for-download {
+  padding: 62px 0 100px;
+}
+.section-for-download__tabs[class] {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.section-for-download__tabs[class] a {
+  padding: 18px 40px;
+}
+.section-for-download__tab-item {
+  margin-bottom: 86px;
+}
+.section-for-download__form {
+  background-image: url("/src/img/section-grid__item-3.webp");
 }/*# sourceMappingURL=style.css.map */
