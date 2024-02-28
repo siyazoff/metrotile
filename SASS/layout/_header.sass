@@ -5,7 +5,7 @@
     left: 50%
     transform: translateX(-50%)
     z-index: 999
-    
+    transition: all .3s ease-in-out
     display: flex
 
     &__box
@@ -23,6 +23,19 @@
         justify-content: space-evenly
         position: relative
         z-index: 2
+        transition: all .3s ease-in-out
+        backface-visibility: hidden
+
+    &__box-inner
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        position: relative
+        z-index: 2
+        height: 100%
+        width: 100%
+        max-width: 1290px
+
 
     &__burger
         display: flex
@@ -98,3 +111,104 @@
                 font-weight: 400
                 opacity: .4
 
+
+
+@media all and (max-width: 768px)
+    .header 
+        top: 0
+
+        &__box
+            height: 48px
+            border-radius: 0
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05))
+            border-bottom-left-radius: 12px
+            border-bottom-right-radius: 12px
+            padding-inline: 16px
+
+
+        &__box-inner
+            justify-content: space-between
+
+        &__burger
+            gap: 5px
+
+            span
+                width: 22px
+                height: 2px
+
+            &.is_active
+                span
+                    &:first-child
+                        transform: translateY(7px) rotate(45deg)
+                    &:last-child
+                        transform: translateY(-7px) rotate(-45deg)
+        
+        &__map
+            display: none
+
+        &__logo
+            height: 23px
+            margin-right: auto
+            margin-left: 20px
+            svg
+                width: 88px
+                height: 23px
+
+
+        &__call
+            display: flex
+            align-items: center
+            gap: 5px
+            margin-right: 11px
+
+            p
+                gap: 3px
+
+            svg
+                width: 11px
+                height: 13px
+
+            span
+                font-size: 9.6px
+                font-weight: 500
+                line-height: 9.6px
+                letter-spacing: 0.384px
+
+                &.hot-line-text
+                    font-size: 7px
+                    font-weight: 400
+                    line-height: 7px
+                    letter-spacing: 0.277px
+
+        &__language
+            gap: 4px
+            padding: 6px
+            border-radius: 6px
+
+            svg
+                width: 12px
+                height: 12px
+                overflow: visible
+
+            .language__line
+                display: none
+
+            a
+                @include fontStyle(8px, 700, 8px)
+                &.secondary_language
+                    font-weight: 400
+                    opacity: .4
+                    margin-left: 3px
+
+
+        &__call-me-back
+            &:visited, &:link
+                display: none
+
+
+@media all and (max-width: 330px)
+    .header__call
+        margin-right: 3px
+
+    .header__logo
+        margin-left: 3px

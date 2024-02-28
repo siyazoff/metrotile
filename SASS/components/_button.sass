@@ -22,3 +22,24 @@
             border-radius: 52px
             @include fontStyle(17px, 700, 120%)
             padding: 8px 30px 6px
+
+
+@media all and (max-width: 768px)
+    .button
+        &:link, &:visited
+            gap: 7px
+            padding: 10px 25px
+            border-radius: 7px
+            @include fontStyle(10px, 600, normal)
+
+        svg
+            transform: translateY(-1px)
+            width: 7px
+
+
+        &_stock
+            &:link, &:visited
+                background: $color-orange
+                border-radius: 29px
+                @include fontStyle(10px, 700, 140%)
+                padding: 4px 16px 3px
