@@ -55,3 +55,64 @@
             img
                 transform: scale(1.2)
 
+
+
+@media all and (max-width: 768px)
+    .section-projects
+        padding: 45px 0
+
+        &__title
+            margin-bottom: 16px
+
+        &__box
+            display: grid
+            grid-template-columns: repeat(11, 1fr)
+            gap: 5px
+
+        &__item
+            border-radius: 5px
+
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                transition: transform .6s ease-in-out
+
+            &:first-child
+                height: 156px
+            &:nth-child(3)
+                height: 203px
+            &:nth-child(5)
+                height: 155px
+            &:nth-child(6)
+                grid-column: span 5
+                padding: 42px 0 30px 24px
+                top: 0
+                margin-top: -36px
+                margin-left: -28px
+                background: $color-white
+                border-radius: 0
+                border-top-left-radius: 15px
+                height: 191px
+                display: flex
+                flex-direction: column
+                h2
+                    margin-bottom: 14px
+                    margin-top: auto
+                    font-size: 18px
+
+                a
+                    &:link, &:visited
+                        padding: 10px 14px
+                        max-width: 157px
+                        width: 100%
+                        justify-content: center
+            &:nth-child(7)
+                height: 117px
+            &:nth-child(8)
+                height: 117px
+
+            &:hover
+                img
+                    transform: scale(1.2)
+

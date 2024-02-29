@@ -67,3 +67,69 @@
         color: $color-white
         margin-top: 10px
         max-width: 240px
+
+
+
+@media all and (max-width: 768px)
+    .section-consult
+        padding: 30px 0 25px
+
+        &__left-img
+            width: 100%
+            height: 210px
+            border-top-right-radius: 10px
+            border-bottom-right-radius: unset
+            border-top-left-radius: 10px
+            float: none
+
+        &__box
+            padding: 31px 0 0
+
+        &__title
+            font-size: 26px
+            margin-bottom: 17px
+
+        &__desc
+            font-size: 13px
+            color: $color-black
+            margin-bottom: 10px
+
+        &__form
+            grid-template-columns: repeat(2, 1fr)
+            gap: 10px
+
+            input
+                grid-column: span 2
+                padding: 11px 12px 10px 
+                border: 0.71px solid #E1E1E1
+                border-radius: 7px
+                font-size: 11px
+                line-height: 14px
+
+                &:focus
+                    outline: none
+
+            textarea
+                padding: 14px 12px
+                border-radius: 7px
+                border: 0.71px solid #E1E1E1
+                font-size: 11px
+                line-height: 24px
+
+        &__consent
+            margin-top: 0px
+            padding: 0
+            font-size: 9px
+            margin-left: auto
+            line-height: 10px
+            margin-top: 10px
+            display: flex
+            align-items: center
+
+        &__submit
+            background: $color-main
+            color: $color-white
+            margin-top: 10px
+            max-width: 240px
+            height: fit-content
+            padding: 14px 13px 14px 15px

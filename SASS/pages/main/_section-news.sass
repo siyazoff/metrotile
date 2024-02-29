@@ -14,6 +14,9 @@
         path
             &:last-child
                 fill: #444
+        .link-more__svg
+            path
+                fill: none
 
     &__between-btn-line
         width: 2px
@@ -39,6 +42,9 @@
         border-radius: 3px
         span
             background: $color-main !important
+
+    &__swiper-mobile-prev, &__swiper-mobile-next, &__between-btn-line-mobile
+        display: none
 
 .news-item
     display: flex
@@ -93,3 +99,89 @@
 
     &:hover
         box-shadow: 0px 4px 20px 0px rgba(52, 52, 52, 0.15)
+
+
+
+@media all and (max-width: 768px)
+    .section-news
+        padding: 20px 0
+
+        &__heading-box
+            margin-bottom: 17px
+            text-align: center
+
+        &__heading-btns
+            display: none
+
+        &__content-box
+            padding-bottom: 50px
+
+        &__swiper-pagination
+            bottom: 30px
+            height: 1.5px !important
+
+        &__heading-mobile-btns
+            display: flex
+            align-items: center
+
+            .link-more
+                margin-left: auto
+                margin-bottom: auto
+                margin-top: auto
+
+        &__between-btn-line-mobile
+            display: flex
+
+        &__swiper-mobile-prev, &__swiper-mobile-next
+            display: flex
+            height: 45px
+            svg
+                transition: transform .3s ease
+
+            &:hover
+                svg
+                    transform: scale(1.1)
+
+            &:active
+                svg
+                    transform: scale(1)
+
+    .news-item
+        border-radius: 9px
+        flex-direction: column
+
+        img
+            max-width: 100%
+            height: 158px
+
+        &__content
+            padding: 15px 19px 23px
+
+        &__date
+            font-size: 11px
+            line-height: 17px
+            margin-bottom: 7px
+
+        &__title
+            font-size: 13px
+            line-height: 18px
+
+        &__line
+            height: 1.4px
+            width: 44px
+            margin-bottom: 13px
+
+        &__desc
+            font-size: 10px
+            line-height: 15px
+            margin-bottom: 14px
+
+        &__more
+            font-size: 12px
+            line-height: 17px
+            letter-spacing: 1.2px
+            gap: 8px
+
+        &:hover
+            box-shadow: 0px 2.839px 14.196px 0px rgba(52, 52, 52, 0.15)
+            

@@ -25,6 +25,15 @@ const collectionTabs = new Swiper(".collection-tabs__thumbs", {
     nextEl: ".collection-tabs-next",
     prevEl: ".collection-tabs-prev",
   },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 5.6,
+    },
+    768: {
+      slidesPerView: 10,
+    },
+  },
 });
 
 const collectionMainSwiper = new Swiper(".collection-sides-box__swiper", {
@@ -53,6 +62,24 @@ const collectionThumbs = new Swiper(".section-collection__thumbs", {
   watchSlidesProgress: true,
   grid: {
     rows: 3,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 6,
+      spaceBetween: 8,
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+    },
+
+    768: {
+      slidesPerView: 4,
+      grid: {
+        rows: 3,
+      },
+    },
   },
 });
 
@@ -99,6 +126,21 @@ const youtubeSwiper = new Swiper(".section-youtube__swiper", {
     nextEl: ".section-youtube__swiper-next",
     prevEl: ".section-youtube__swiper-prev",
   },
+
+  breakpoints: {
+    320: {
+      navigation: {
+        nextEl: ".section-youtube__mobile-swiper-next",
+        prevEl: ".section-youtube__mobile-swiper-prev",
+      },
+    },
+    768: {
+      navigation: {
+        nextEl: ".section-youtube__swiper-next",
+        prevEl: ".section-youtube__swiper-prev",
+      },
+    },
+  },
 });
 
 const newsSwiper = new Swiper(".section-news__swiper", {
@@ -112,6 +154,20 @@ const newsSwiper = new Swiper(".section-news__swiper", {
   navigation: {
     nextEl: ".section-news__swiper-next",
     prevEl: ".section-news__swiper-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 11,
+      navigation: {
+        nextEl: ".section-news__swiper-mobile-next",
+        prevEl: ".section-news__swiper-mobile-prev",
+      },
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
   },
 });
 

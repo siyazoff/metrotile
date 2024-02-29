@@ -47,3 +47,33 @@
         column-gap: 18px
         row-gap: 19px
         margin-inline: auto
+
+
+
+
+@media all and (max-width: 768px)
+    .section-advantages
+        padding-bottom: 45px
+        margin-top: 27px
+        padding-top: 67px
+
+        &__bg-wrapper
+            height: 260px
+            border-top-left-radius: 12px
+            border-top-right-radius: 12px
+            z-index: 0
+
+        .container  
+            position: relative
+            z-index: 1
+
+        &__title
+            color: $color-white
+            padding-left: 0
+            text-align: center
+
+        &__box
+            margin-top: 22px
+            grid-template-columns: repeat(2, 1fr)
+            column-gap: 9px
+            row-gap: 11px

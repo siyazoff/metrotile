@@ -65,3 +65,84 @@
         text-align: end
         margin-right: 80px
         display: block
+
+    &__mobile-email
+        display: none
+
+
+
+@media all and (max-width: 768px)
+    .footer
+        padding: 26px 0 18px
+
+        &__box
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            row-gap: 28px
+
+        &__logo
+            order: 0
+            display: flex
+            align-items: center
+            svg
+                width: 137px
+
+        &__item
+            h2
+                font-size: 12px
+                margin-bottom: 10px
+
+            a, p
+                font-size: 10px
+                line-height: 16px
+
+            p
+                &:not(:last-child)
+                    margin-bottom: 10px
+
+            &:last-child
+                margin-left: 0
+            &:nth-child(2)
+                order: 2
+            &:nth-child(4)
+                order: 3
+
+        &__social-item
+            order: 1
+            justify-content: center
+
+            h2
+                display: none
+                
+
+        &__grid-inner
+            display: none
+
+            
+        &__social-desktop
+            gap: 10px
+            margin-bottom: 0
+            margin-top: 0
+            justify-content: end
+
+            img
+                width: 30px 
+                height: 30px
+
+            & ~ a
+                display: none
+
+        &__line
+            height: .7px
+            margin-top: 35px
+            margin-bottom: 15px
+
+        &__polit
+            font-size: 10px
+            font-weight: 300
+            text-align: start
+            margin-right: 0
+
+        &__mobile-email
+            display: block
+            margin-top: -10px

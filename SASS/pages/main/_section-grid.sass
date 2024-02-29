@@ -56,3 +56,48 @@
         text-transform: uppercase
         max-width: 450px
         margin-bottom: 14px
+
+
+@media all and (max-width: 768px)
+    .section-grid
+        padding: 26px 0 
+
+        &__box
+            grid-template-columns: repeat(1, 1fr)
+            gap: 10px
+
+        &__item
+            padding: 23px 0 23px 10px
+            border-radius: 7px
+
+            &:first-child
+                img
+                    object-fit: cover
+                    right: 0
+                    height: 100%
+                    max-width: 230px
+                    width: 100%
+
+            &:nth-child(2)
+                order: 2
+                img
+                    right: -10px
+                    top: 10px
+                    max-width: 255px
+                    heigh: 135px
+
+            &:nth-child(3), &:last-child
+                .section-grid__title
+                    color: $color-white
+
+            &:nth-child(3)
+                order: 1
+            &:last-child
+                order: 3
+                
+
+        &__title
+            font-size: 20px
+            line-height: 27px
+            max-width: 200px
+            margin-bottom: 7px

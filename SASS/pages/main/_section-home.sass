@@ -93,6 +93,7 @@
         &__swiper
             border-bottom-left-radius: 12px
             border-bottom-right-radius: 12px
+            height: 587px
                 
 
         &__slider
@@ -106,40 +107,30 @@
 
         &__content
             padding: 302px 0 64px 15px 
+            display: flex
+            flex-direction: column
 
         &__stock-button
-            margin-top: 0
+            margin-top: auto
 
         &__title
-            margin-top: 17px
+            margin-top: auto
             
         &__desc
             margin-top: 10px
             margin-bottom: 21px
 
         &__stock-img
-            position: absolute
-            z-index: -1
             top: -95px
             transform: translateY(0) translateX(-50%)
             right: 0
             left: 50%
-            width: 100%
             height: 480px
-            object-fit: contain
-            max-width: 800px
 
         &__pagination
             bottom: 16px !important
             left: 15px !important
-            width: fit-content !important
 
             .swiper-pagination-bullet
-                opacity: .3
-                background: $color-white
                 width: 4px
                 height: 4px
-
-            .swiper-pagination-bullet-active
-                opacity: 1
-                background: $color-white

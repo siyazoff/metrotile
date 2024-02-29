@@ -21,6 +21,9 @@
         transform: scale(-1, 1)
         object-position: top
         z-index: -1
+
+    &__mobile-bg
+        display: none
         
     &__box
         padding: 67px 53px 65px 90px
@@ -43,3 +46,38 @@
             gap: 13px
 
     
+
+@media all and (max-width: 768px)
+    .section-instruction
+
+        &::after
+            display: none
+            
+        &__bg
+            display: none
+
+        &__mobile-bg
+            display: block
+            border-radius: 12px 12px 0 0
+            
+        &__box
+            padding: 30px 12px 45px
+            background: linear-gradient(83deg, #04A756 0.98%, rgba(4, 167, 106, 0.83) 58.57%, rgba(4, 167, 157, 0.40) 120.39%)
+            width: 100%
+            border-radius: 0 0 12px 12px
+
+        &__heading
+            margin-bottom: 8px
+
+        &__desc
+            font-size: 12px
+            line-height: 15px
+            margin-bottom: 21px
+
+        &__btn
+            &:link, &:visited
+                gap: 7px
+                width: 100%
+                justify-content: center
+
+        

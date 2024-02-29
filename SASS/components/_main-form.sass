@@ -1,10 +1,7 @@
 .main-form
     background: linear-gradient(83deg, #04A756 0.98%, rgba(4, 167, 106, 0.83) 58.57%, rgba(4, 167, 157, 0.40) 120.39%)
-    background-size: cover
-    background-position: center
     width: 57%
     padding: 109px 43px 90px 45px
-
 
     &__title
         @include fontStyle(45px, 600, 120%)
@@ -85,3 +82,60 @@
     &__consent-personal-data
         @include fontStyle(13px, 300, 120%)
         color: $color-white
+
+
+
+
+@media all and (max-width: 768px)
+    .main-form
+        width: 100%
+        padding: 33px 12px
+
+
+        &__title
+            font-size: 26px
+            margin-bottom: 7px
+            max-width: 200px
+
+        &__subtitle
+            font-size: 18px            
+            margin-bottom: 11px
+
+        &__desc
+            font-size: 12px
+            margin-bottom: 15px
+
+
+        &__form
+            max-width: 100%
+            column-gap: 0
+            row-gap: 8px
+
+            input
+                border-radius: 7px
+                border:  0.71px solid #F8F8F8
+                padding: 12px 10px
+                grid-column: span 2
+                font-size: 11px
+
+                &:focus
+                    outline: none
+
+                    
+        &__wrapper-submit
+            margin-top: 16px
+            gap: 17px
+
+        &__submit-btn
+            border-radius: 7px
+            padding: 14px 13px 14px 25px
+            font-size: 10px
+            letter-spacing: 0.2px
+            gap: 7px
+
+            svg
+                height: 10px
+                transform: translateY(-1px)
+
+        &__consent-personal-data
+            font-size: 9px

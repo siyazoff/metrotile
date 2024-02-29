@@ -18,3 +18,30 @@
 
     &__desc
         @include fontStyle(16px, 400, 24px)
+
+    &__mobile-bg
+        display: none
+
+
+@media all and (max-width: 768px)
+    .section-form-study
+        &__box
+            background: linear-gradient(83deg, #04A756 0.98%, rgba(4, 167, 106, 0.83) 58.57%, rgba(4, 167, 157, 0.40) 120.39%)
+
+        &__main-form
+            padding: 34px 12px 46px
+
+        &__input
+            grid-column: unset
+
+        &__main-form-form
+            input:nth-child(3)
+                grid-column: span 2
+
+        &__desc
+            font-size: 12px
+            line-height: 15px
+
+        &__mobile-bg
+            display: block
+            height: 190px

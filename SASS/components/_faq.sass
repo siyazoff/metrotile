@@ -1,10 +1,11 @@
 .faq    
     border-radius: 14px
-    border: 1px solid $color-main
+    border: 1px solid #F5F5F5
     background: #F5F5F5
     padding: 20px 33px 20px 30px
     font-family: $proximasoft
     cursor: pointer
+    transition: border .3s ease
 
     &__head
         display: flex
@@ -18,6 +19,7 @@
             background: $color-main
             border-radius: 10px
             display: block
+            transition: transform .3s ease
 
             &:last-child
                 transform: translateY(-2.4px) rotate(90deg)
@@ -39,3 +41,39 @@
         @include fontStyle(20px, 400, 28px)
         margin-top: 22px
         margin-bottom: 5px
+
+    &.active
+        border: 1px solid $color-main
+
+        .faq__minus-plus
+            span
+                &:last-child
+                    transform: translateY(-2.4px) rotate(0deg)
+
+
+
+
+@media all and (max-width: 768px)
+    .faq    
+        border-radius: 10px
+        padding: 11px 10px 7px 12px
+
+        &__head
+            display: flex
+            gap: 14px
+            align-items: center
+
+        &__title
+            font-size: 12px
+            line-height: 16px
+
+        &__body
+            padding-left: 36px
+
+        &__desc
+            color: #666
+            @include fontStyle(20px, 400, 28px)
+            font-size: 12px
+            line-height: 15px
+            margin-top: 7px
+            margin-bottom: 0

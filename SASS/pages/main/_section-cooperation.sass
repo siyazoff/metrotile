@@ -25,6 +25,7 @@
         h2
             @include fontStyle(30px, 600, 38px)
             color: $color-white
+            text-transform: uppercase
 
         a
             &:link, &:visited
@@ -42,3 +43,29 @@
         &:hover
             img
                 transform: scale(1.1)
+
+
+@media all and (max-width: 768px)
+    .section-cooperation
+        padding: 45px 0 20px
+
+        &__box
+            margin-top: 18px
+            grid-template-columns: repeat(1, 1fr)
+            gap: 10px
+
+        &__item
+            position: relative
+            border-radius: 20px
+            padding: 32px 21px 20px
+            height: 203px
+
+            h2
+                font-size: 22px
+                line-height: 26px
+
+            a
+                &:link, &:visited
+                    justify-content: center
+                    max-width: 157px
+                    width: 100%
