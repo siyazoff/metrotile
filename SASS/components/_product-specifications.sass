@@ -32,3 +32,33 @@
             @include fontStyle(18px, 400, 22px)
             &:last-child
                 width: fit-content
+
+
+
+@media all and (max-width: 768px)
+    .product-specifications
+        padding: 0
+        border: none
+        border-radius: 0
+
+        &__title
+            font-size: 22px
+            padding-bottom: 0
+            border-bottom: none
+            margin-bottom: 5px
+
+        &__subtitle
+            font-size: 12px
+            margin-bottom: 8px
+
+        &__box
+            gap: 8px
+            width: 100%
+
+        &__item
+            border-bottom: .6px solid #E9E9E9
+            padding-bottom: 2px
+            p
+                color: #666666
+                font-size: 12px
+                line-height: 14px

@@ -155,3 +155,115 @@
         align-items: center
         transform: translateX(-20px)
 
+
+
+
+@media all and (max-width: 768px)
+    .product-tech-docs
+        margin-top: 37px
+        margin-bottom: 40px
+        &__box
+            grid-template-columns: repeat(2, 1fr)
+            gap: 13px
+
+        &__item
+            border-radius: 8px
+
+            img
+                height: 83px
+                border-radius: 8px
+
+            h3
+                margin-bottom: 11px
+                font-size: 12px
+
+            a
+                display: flex
+                align-items: end
+                gap: 5px
+                span
+                    font-size: 12px
+                    letter-spacing: 0.2px
+                svg
+                    width: 13px
+
+        &__item-content
+            padding: 12px 14px
+
+
+    .product-collection
+        margin-bottom: 36px
+
+        &__box
+            display: grid
+            grid-template-columns: repeat(6, 1fr)
+            gap: 6px
+        &__item
+            border-radius: 8px
+
+            &:nth-child(1)
+                grid-column: span 4
+                height: 149px
+            &:nth-child(2)
+                grid-column: span 2
+                height: 149px
+            &:nth-child(3)
+                grid-column: span 6
+                height: 126px
+            &:nth-child(4)
+                grid-column: span 3
+                height: 120px
+            &:nth-child(5)
+                grid-column: span 3
+                height: 120px
+
+
+    .product-example-form
+        padding: 58px 13px 62px
+
+        &__box
+            max-width: 100%
+
+        &__title
+            font-size: 26px
+            margin-bottom: 8px
+
+        &__subtitle
+            line-height: 15px
+            font-size: 12px
+            margin-bottom: 20px
+
+        form
+            grid-template-columns: repeat(2, 1fr)
+            column-gap: 10px
+            row-gap: 8px
+
+            input
+                background: transparent
+                padding: 12px 10px
+                border-radius: 7px
+                font-size: 11px
+                grid-column: span 2
+
+                &:nth-child(1)
+                    grid-column: span 2
+
+            button
+                border-radius: 7px
+                padding: 14px 5px
+                gap: 7px
+                font-size: 10px
+                letter-spacing: 0.2px
+                grid-column: span 1
+                max-width: 157px
+
+                svg
+                    transform: translateY(-1px)
+                    width: 6px
+
+        &__agree
+            transform: none
+            font-size: 9px
+            line-height: 10px
+            grid-column: span 1
+

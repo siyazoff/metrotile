@@ -21,3 +21,17 @@
                 align-items: center
                 @include fontStyle(15px, 400, 24px)
                 color: #444444
+
+
+
+@media all and (max-width: 768px)
+    .breadcrumbs
+        margin-top: 66px
+
+        &__box
+            gap: 5px
+            font-size: 11px
+
+            a
+                &.prev-page
+                    font-size: 11px

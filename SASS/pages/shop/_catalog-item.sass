@@ -84,6 +84,9 @@
         &:hover
             transform: scale(1.1)
 
+        &-mobile
+            display: none
+
     &__stock
         position: absolute
         top: 14px
@@ -100,3 +103,82 @@
             @include fontStyle(20px, 600, normal)
             font-family: $proximasoft
             color: $color-white
+
+
+@media all and (max-width: 768px)
+    .catalog-item
+        padding: 6px 7px 26px
+        border: .25px solid #E5E5E5
+        max-width: 100%
+
+        &__swiper
+            height: 116px
+            border-radius: 6px
+            max-width: 100%
+            width: calc(50vw - 30px)
+            position: relative
+            margin-bottom: 11px
+
+        &__slide
+            img
+                border-radius: 6px
+
+        &__pagination
+            bottom: 7px !important
+
+            .swiper-pagination-bullet
+                height: 4px
+                width: 4px
+
+        &__name
+            font-size: 12px
+            margin-bottom: 8px
+
+        &__specifications
+            margin-bottom: 6px
+
+        &__parametr
+            font-size: 8px
+            line-height: normal
+
+        &__price-cart
+            align-items: start
+            margin-top: auto
+            flex-direction: column
+        &__price
+            h3
+                &:nth-child(1), &:nth-child(3)
+                    font-size: 7px
+                    margin-bottom: 4px
+                &:nth-child(2), &:nth-child(4)
+                    font-size: 11px
+                &:nth-child(2)
+                    margin-bottom: 6px
+                &:nth-child(1)
+                    margin-top: 0
+                    
+        &__add-cart
+            display: none
+
+            &-mobile
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 5px
+                color: $color-white
+                font-size: 12px
+                font-weight: 700
+                letter-spacing: 0.24px
+                background: $color-main
+                padding: 8px
+                width: 100%
+                margin-top: 15px
+                border-radius: 10px
+
+        &__stock
+            top: 7px
+            left: 8px
+            width: 32px
+            height: 32px
+            span
+                font-size: 9px

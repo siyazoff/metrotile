@@ -160,3 +160,103 @@
 
     &__docs
         margin-top: 42px
+
+
+
+@media all and (max-width: 768px)
+    .section-product
+        padding-bottom: 80px
+
+        &__tabs
+            margin-top: 18px
+            margin-bottom: 19px
+
+        &__box
+            padding: 0
+            border: none
+            border-radius: 0
+            grid-template-columns: repeat(1, 1fr)
+            margin-bottom: 35px
+
+        &__left
+            width: 100%
+            max-width: calc( 100vw - 30px )
+            height: 247px
+
+        &__right
+            max-width: 100%
+            width: 100%
+            height: fit-content
+            margin-left: auto
+
+        &__title
+            font-size: 25px
+            margin-bottom: 3px
+            margin-top: 20px
+
+        &__subtitle
+            @include fontStyle(16px, 400, 120%)
+            color: $color-black
+
+        &__line
+            height: 1px
+            margin-top: 10px
+            margin-bottom: 10px
+
+        &__color
+            display: flex
+            h3
+                font-size: 15px
+                color: $color-black
+
+                &.choose-color
+                    width: fit-content
+                    margin-right: 3px
+
+        &__swiper-color-name
+            height: 30px
+
+        &__thumbs
+            padding-top: 9px
+            max-width: calc( 100vw - 30px )
+
+            .swiper-slide
+                height: 43px
+                img
+                    border-radius: 5px
+
+                &.swiper-slide-thumb-active
+                    img
+                        outline: 1px solid $color-black
+                        outline-offset: 2px
+
+        &__price
+            margin-top: 32px
+            h3
+                font-size: 11px
+                &:nth-child(2)
+                    @include fontStyle(30px, 700, normal)
+                    font-size: 22px
+                    margin-top: 10px
+
+        &__btns
+            margin-top: 16px
+            gap: 16px
+
+        &__count
+            display: flex
+            border-radius: 10px
+            border: 1px solid #BDBDBD
+            padding: 10px
+            gap: 20px
+
+        &__add-to-card
+            padding: 0 31px 0
+
+        &__description
+            grid-column: span 1
+            margin-top: 21px
+            font-size: 13px
+
+        &__docs
+            margin-top: 42px

@@ -198,6 +198,24 @@ const productSwiperThumbs = new Swiper(".section-product__thumbs", {
     rows: 2,
     fill: "row",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 7,
+      spaceBetween: 8,
+      grid: {
+        rows: 1,
+        fill: "row",
+      },
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 27,
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+    },
+  },
 });
 
 const productColorNameSwiper = new Swiper(

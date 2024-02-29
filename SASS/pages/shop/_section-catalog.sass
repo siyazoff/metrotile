@@ -24,3 +24,28 @@
         display: grid
         grid-template-columns: repeat(4, 1fr)
         border: .5px solid #E5E5E5
+
+
+
+@media all and (max-width: 768px)
+    .section-catalog
+        position: relative
+        padding: 24px 0 66px
+
+        &__tabs
+            overflow-x: scroll
+            gap: 7px
+            margin-top: 18px
+            margin-bottom: 19px
+            padding-bottom: 4px
+
+        &__tab
+            flex-shrink: 0
+            padding: 11px 12px
+            border-radius: 6px
+            font-size: 11px
+            line-height: 13px
+
+        &__box
+            grid-template-columns: repeat(2, 1fr)
+            border: .25px solid #E5E5E5
