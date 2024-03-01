@@ -77,3 +77,72 @@
             border-bottom: none
             img
                 height: 428px !important
+
+
+
+@media all and (max-width: 768px)
+    .section-production-advantages
+        padding: 25px 0 50px
+
+        &-3
+            padding: 25px 0 20px
+
+        &__box
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+            grid-template-rows: unset
+            margin-top: 10px
+            column-gap: 0
+            row-gap: 10px
+
+            &_leader
+                column-gap: 0
+
+
+    .production-advantages
+        padding-bottom: 10px
+
+        img
+            border-radius: 7px
+            height: 160px
+            margin-bottom: 15px
+        
+        &__title
+            color: $color-black
+            font-size: 13px
+            margin-bottom: 4px
+
+        &__desc
+            font-size: 10px
+            line-height: 120%
+
+        &:nth-child(2)
+            grid-row: unset
+
+            img
+                height: 160px
+            
+        &:nth-child(3)
+            img
+                height: 160px
+
+        &__side
+            gap: 10px
+
+        &_leader
+            &-1
+                img
+                    height: 160px
+
+            &-2
+                border-bottom: 1px solid #D3D3D3
+                img
+                    height: 160px !important
+
+            &-3
+                img
+                    height: 160px
+            &-4
+                border-bottom: 1px solid #D3D3D3
+                img
+                    height: 160px !important

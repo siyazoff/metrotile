@@ -136,3 +136,91 @@
 
         .location-card__title, a, span
             display: block
+
+.section-location-form
+    padding: 40px 0 100px
+
+
+@media all and (max-width: 768px)
+    .section-location
+        padding: 25px 0 35px
+
+        &__box
+            margin-top: 15px
+            grid-template-columns: 1fr
+            column-gap: 0
+            row-gap: 15px
+
+        &__info-wrapper
+            display: flex
+            flex-direction: column
+            gap: 17px
+            order: 1
+
+        &__map-wrapper
+            position: relative
+            overflow-y: scroll
+            scrollbar-width: thin
+            scrollbar-color: #04A756 #E1E1E1
+
+            &::-webkit-scrollbar
+                width: 2px
+
+            &::-webkit-scrollbar-thumb
+                background: #04A756
+                border-radius: 20px
+
+            &::-webkit-scrollbar-track
+                background: #E1E1E1
+
+            &::after
+                display: none
+            svg
+                width: 400px
+                height: 250px
+
+
+
+
+    .location-card
+        border-radius: 7px
+        padding: 13px
+
+        &__title
+            font-size: 16px
+            line-height: 120%
+            letter-spacing: 1px
+            margin-bottom: 6px
+
+        &__line
+            width: 30px
+            height: 1px
+            margin-bottom: 12px
+
+        &__item
+            gap: 5px
+
+            &:not(:last-child)
+                margin-bottom: 10px 
+
+        p
+            color: $color-white
+            font-size: 14px
+            line-height: 14px
+            gap: 6px
+            align-items: center
+
+            svg
+                width: 10px
+                height: 10px
+
+        a, span
+            font-size: 14px
+            line-height: 120%
+
+        &__arrow
+            display: none
+
+
+    .section-location-form
+        padding: 20px 0 50px

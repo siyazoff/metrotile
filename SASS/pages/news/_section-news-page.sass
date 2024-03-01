@@ -104,3 +104,83 @@
             text-decoration-line: underline
             color: #04A756
 
+
+
+@media all and (max-width: 768px)
+    .section-news-page
+        padding: 45px 0 40px
+
+        &__grid
+            grid-template-columns: repeat(1, 1fr)
+            column-gap: 0
+            row-gap: 15px
+
+        &__aside-wrapper
+            border-radius: 7px
+            max-height: 600px
+            order: 1
+
+        &__aside
+            max-width: 100%
+
+            &::-webkit-scrollbar
+                width: 1px
+
+        &__box
+            padding-top: 0
+            grid-column: unset
+
+        &__heading
+            margin-bottom: 25px
+
+        &__date
+            font-size: 12px
+            line-height: 120%
+            margin-bottom: 10px
+
+        &__title
+            font-size: 18px
+            line-height: 120%
+
+        &__content
+            grid-template-columns: 1fr
+            column-gap: 0
+            row-gap: 10px
+
+            p
+                grid-column: unset
+                font-size: 14px
+                line-height: 120%
+
+            img
+                border-radius: 7px
+                height: 150px
+
+
+
+
+    .news-page-link-item
+        padding: 6px 5px
+        display: flex
+        gap: 10px
+
+        &__img
+            max-width: 100%
+            height: auto
+            border-radius: 5px
+
+        p
+            font-size: 16px
+            font-weight: 600
+            line-height: 22px
+            color: #444444
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            -webkit-line-clamp: 3
+            overflow: hidden
+
+        &.active
+            p
+                text-decoration-line: underline
+                color: #04A756
+

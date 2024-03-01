@@ -247,6 +247,18 @@ const historyThumbs = new Swiper(".swiper-history__thumbs", {
   watchSlidesProgress: true,
   centeredSlides: true,
   speed: 800,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 5,
+      spaceBetween: 25,
+      centeredSlides: false,
+    },
+    768: {
+      slidesPerView: 9,
+      spaceBetween: 86,
+    },
+  },
 });
 
 const historyContentSwiper = new Swiper(".swiper-history-content", {
@@ -256,6 +268,17 @@ const historyContentSwiper = new Swiper(".swiper-history-content", {
   allowTouchMove: false,
   controller: {
     control: historyThumbs,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
   },
 });
 
@@ -275,6 +298,18 @@ const historyImgSwiper = new Swiper(".swiper-history-img", {
   },
   controller: {
     control: historyContentSwiper,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
   },
 });
 

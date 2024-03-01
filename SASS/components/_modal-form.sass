@@ -1,0 +1,128 @@
+.modal-form
+    display: none
+    &__inner
+        position: relative
+        padding: 89px 77px 89px
+        max-width: 681px
+
+    &__close-btn
+        position: absolute
+        cursor: pointer
+        top: 13px
+        right: 16px
+
+    &__subtitle
+        color: #333
+        font-size: 24px
+        font-weight: 400
+        line-height: 28px
+
+    &__main-form
+        max-width: 100%
+        margin-top: 33px
+
+        input
+            color: #333
+            border: 1px solid #E4E4E4
+            &::placeholder
+                color: #333
+
+        .main-form__wrapper-submit
+            margin-top: 17px
+
+        .main-form__submit-btn
+            background: $color-main
+            color: $color-white
+            path
+                stroke: $color-white
+
+        .main-form__consent-personal-data
+            color: #333
+            font-size: 13px
+            font-weight: 300
+            line-height: 20px
+
+
+
+.tingle-modal--visible .tingle-modal-box
+    border: none
+    border-radius: 12px
+    padding: 0
+    width: fit-content
+
+.tingle-modal-box__content
+    padding: 0
+
+
+.tingle-modal
+    background: rgba(56, 56, 56, 0.60)
+    backdrop-filter: blur(5px)
+
+
+
+.modal-form-thx
+    display: none
+
+    &__inner
+        padding: 72px 118px 70px
+
+    &__close-btn
+        position: absolute
+        top: 13px
+        right: 15px
+
+    &__box
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    &__done
+        margin-bottom: 21px
+
+    &__title
+        margin-bottom: 1px
+
+    &__subtitle
+        margin-bottom: 42px
+
+
+
+
+@media all and (max-width: 768px)
+    .modal-form
+        display: none
+        &__inner
+            position: relative
+            padding: 40px 35px
+
+        &__subtitle
+            font-size: 20px
+            line-height: 120%
+
+        &__main-form
+            margin-top: 15px
+
+            .main-form__wrapper-submit
+                margin-top: 10px
+
+
+            .main-form__consent-personal-data
+                font-size: 12px
+                line-height: 120%
+
+
+    .modal-form-thx
+        display: none
+
+        &__inner
+            padding: 40px 35px
+
+        &__done
+            margin-bottom: 15px
+
+        &__title
+            margin-bottom: 1px
+
+        &__subtitle
+            margin-bottom: 20px

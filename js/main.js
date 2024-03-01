@@ -87,12 +87,24 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {
       var elements = document.querySelectorAll(".background-change");
       elements.forEach(function (element) {
-        if (window.scrollY >= 2891) {
-          element.style.backgroundAttachment = "unset";
-          element.style.backgroundPosition = "46.5% 50%";
+        console.log(window.scrollY);
+        if (window.innerWidth >= 768) {
+          // Проверяем ширину экрана для десктопа
+          if (window.scrollY >= 2891) {
+            element.style.backgroundAttachment = "unset";
+            element.style.backgroundPosition = "46.5% 50%";
+          } else {
+            element.style.backgroundAttachment = "fixed";
+            element.style.backgroundPosition = "47% 50%";
+          }
         } else {
-          element.style.backgroundAttachment = "fixed";
-          element.style.backgroundPosition = "47% 50%";
+          if (window.scrollY >= 1577) {
+            element.style.backgroundAttachment = "unset";
+            element.style.backgroundSize = "100%";
+          } else {
+            element.style.backgroundAttachment = "fixed";
+            element.style.backgroundSize = "90%";
+          }
         }
       });
     });
@@ -146,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
   if (window.location.pathname.includes("cart")) {
     const forms = document.querySelectorAll(".cart-item__form-quantity");
 
@@ -169,4 +182,54 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  var modalForm = new tingle.modal({
+    onClose: function () {
+      modalForm.setContent("");
+    },
+    closeLabel: "Закрыть",
+  });
+
+  var modalFormBtn = document.querySelectorAll(".modal-form__caller");
+
+  modalFormBtn.forEach((el) => {
+    el.addEventListener("click", function () {
+      var modalContent = document.querySelector(".modal-form").cloneNode(true);
+      modalContent.style.display = "block";
+      modalForm.setContent(modalContent.innerHTML);
+
+      modalForm.open();
+      document
+        .querySelector(".tingle-modal .modal-form__close-btn")
+        .addEventListener("click", function () {
+          modalForm.close();
+        });
+    });
+  });
+
+  var modalFormThx = new tingle.modal({
+    onClose: function () {
+      modalFormThx.setContent("");
+    },
+    closeLabel: "Закрыть",
+  });
+
+  var modalThxBtn = document.querySelectorAll(".modal-form-thx__caller");
+
+  modalThxBtn.forEach((el) => {
+    el.addEventListener("click", function () {
+      var modalContent = document
+        .querySelector(".modal-form-thx")
+        .cloneNode(true);
+      modalContent.style.display = "block";
+      modalFormThx.setContent(modalContent.innerHTML);
+
+      modalFormThx.open();
+      document
+        .querySelector(".tingle-modal .modal-form-thx__close-btn")
+        .addEventListener("click", function () {
+          modalFormThx.close();
+        });
+    });
+  });
 });

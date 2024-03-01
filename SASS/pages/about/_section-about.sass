@@ -135,3 +135,113 @@
 
     &__box
         margin-top: 0
+
+
+@media all and (max-width: 768px)
+    .section-about-home
+        &__title
+            margin-top: 19px
+            margin-bottom: 50px
+
+    .section-about-difference
+        padding: 45px 0 45px
+
+        &__box
+            flex-direction: column-reverse
+            gap: 20px
+            padding: 0
+
+            &::after
+                display: none
+
+            img
+                max-width: 100%
+                min-height: 250px
+                height: 250px
+                border-radius: 7px
+
+        &__content
+            max-width: 100%
+            flex-direction: column
+            gap: 7px
+            
+            p
+                line-height: 120%
+                font-size: 13px
+
+
+
+    .section-about-why
+        margin: 0
+        &__box
+            grid-template-columns: repeat(1, 1fr)
+
+
+
+    .section-about-animation
+        &__box
+            display: flex
+            flex-direction: column
+        &__tabs
+            margin-bottom: 25px
+
+        
+    .about-animation-item
+        flex-direction: column
+        background-attachment: fixed
+        background-size: 90%
+        background-position: 50% 50%
+        &__left
+            display: flex
+            flex-direction: column
+            gap: 7px
+            max-width: 100%
+
+            h3
+                font-size: 15px
+                line-height: 120%
+
+        &__right
+            gap: 10px
+            max-width: 100%
+            padding-top: 15px
+
+            h3
+                font-size: 17px
+                line-height: 120%
+
+            p
+                font-size: 13px
+
+        &:nth-child(1)
+            padding-bottom: 50px
+            background-image: url('/src/img/section-about-animation-1-2.webp')
+        &:nth-child(2)
+            padding-bottom: 50px
+            background-image: url('/src/img/section-about-animation-2-2.webp')
+        &:nth-child(3)
+            padding-bottom: 50px
+            background-image: url('/src/img/section-about-animation-3-2.webp')
+        &:nth-child(4)
+            padding-bottom: 50px
+            background-image: url('/src/img/section-about-animation-4-2.webp')
+        &:nth-child(5)
+            padding-bottom: 50px
+            background-image: url('/src/img/section-about-animation-5-2.webp')
+        &:nth-child(6)
+            padding-bottom: 200px
+            transition: all 0.1s ease
+            background-image: url('/src/img/section-about-animation-6-2.webp')
+
+    .section-about-work
+        padding: 40px 0 0
+
+        &__tabs
+            margin: 0
+
+
+    .section-about-work-main
+        padding: 30px 0 40px
+
+        &__box
+            margin-top: 0

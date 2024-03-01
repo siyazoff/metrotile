@@ -41,3 +41,36 @@
             height: 100%
             object-fit: cover
             border-radius: 15px
+
+
+@media all and (max-width: 768px)
+    .seciton-production-results
+        padding: 40px 0 50px
+
+        &__box
+            flex-direction: column
+            gap: 20px
+
+        &__left
+            flex-direction: column
+            gap: 10px
+            max-width: 100%
+            padding-top: 0
+
+            p
+                font-size: 13px
+
+        &__right
+            padding-top: 0
+            padding: 13px 13px 0 0 
+            
+            &::after
+                top: 0
+                right: 0
+                max-width: 158px
+                height: 130px
+                border-radius: 7px
+
+            img
+                min-height: 180px
+                border-radius: 7px

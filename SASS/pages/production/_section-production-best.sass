@@ -71,3 +71,54 @@
             outline: 1px solid $color-black
             outline-offset: 4px
 
+
+
+
+@media all and (max-width: 768px)
+    .section-production-best
+        padding: 20px 0 25px
+
+        &__box
+            display: flex
+            flex-direction: column-reverse
+            gap: 20px
+            justify-content: end
+
+        &__content
+            padding-top: 0
+            max-width: 100%
+            gap: 7px
+            
+            p
+                font-size: 13px
+        
+
+    .swiper-production-best
+        width: 100%
+        height: 250px
+        border-radius: 7px
+        max-width: 100%
+
+        .swiper-wrapper
+            align-items: end
+
+        .swiper-slide
+            height: 250px
+            border-radius: 7px
+
+            &-active
+                height: 250px
+
+        img
+            border-radius: 7px
+
+        &__pagination
+            .swiper-pagination-bullet
+                height: 3px
+                width: 3px
+                &:not(:last-child)
+                    margin-right: 5px !important
+
+            .swiper-pagination-bullet-active
+                outline-offset: 3px
+
