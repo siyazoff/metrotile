@@ -188,9 +188,7 @@
         
     .about-animation-item
         flex-direction: column
-        background-attachment: fixed
-        background-size: 90%
-        background-position: 50% 50%
+        background: white
         &__left
             display: flex
             flex-direction: column
@@ -215,23 +213,38 @@
 
         &:nth-child(1)
             padding-bottom: 50px
-            background-image: url('/src/img/section-about-animation-1-2.webp')
+            background: white
+            
         &:nth-child(2)
             padding-bottom: 50px
-            background-image: url('/src/img/section-about-animation-2-2.webp')
+            background: white
+            
         &:nth-child(3)
             padding-bottom: 50px
-            background-image: url('/src/img/section-about-animation-3-2.webp')
+            background: white
+            
         &:nth-child(4)
+            background: white
+            
             padding-bottom: 50px
-            background-image: url('/src/img/section-about-animation-4-2.webp')
         &:nth-child(5)
             padding-bottom: 50px
-            background-image: url('/src/img/section-about-animation-5-2.webp')
+            background: white
+            
         &:nth-child(6)
-            padding-bottom: 200px
-            transition: all 0.1s ease
-            background-image: url('/src/img/section-about-animation-6-2.webp')
+            padding-bottom: 0
+            background: white
+
+            &::after
+                content: ''
+                background-image: url("/src/img/section-about-animation-6-2.webp")
+                background-repeat: no-repeat
+                background-position: center
+                background-size: contain
+                height: 400px
+                width: 100%
+
+
 
     .section-about-work
         padding: 40px 0 0

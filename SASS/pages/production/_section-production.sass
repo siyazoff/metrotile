@@ -1,6 +1,8 @@
 .section-production-home
     background-image: url(/src/img/production-home.webp)
 
+    &__subtitle
+
 
 .section-production
     padding: 90px 0 35px
@@ -215,6 +217,12 @@
 
 
 @media all and (max-width: 768px)
+    .section-production-home
+        background-image: url(/src/img/production-home.webp)
+
+        &__subtitle
+            br
+                display: none
     .section-production
         padding: 40px 0 20px
         min-height: 680px
