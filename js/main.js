@@ -118,11 +118,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentActiveCityClass = null;
     let allCities = document.querySelectorAll(".city");
     let allCitiesContent = document.querySelectorAll("[data-city]");
+
     document
       .querySelectorAll('[data-city="astana"]')
       .forEach(function (element) {
         element.classList.add("active");
       });
+
     document.querySelectorAll(".city-astana").forEach(function (element) {
       element.classList.add("active");
     });
