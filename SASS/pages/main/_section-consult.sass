@@ -1,18 +1,21 @@
 .section-consult
     padding: 48px 0 100px
+    position: relative
 
     &__left-img
-        width: 47%
-        height: 594px
-        object-fit: cover
-        border-top-right-radius: 20px
-        border-bottom-right-radius: 20px
-        float: left
+        width: 100%
+        max-width: 700px
+        height: 627px
+        object-fit: contain
+        position: absolute
+        right: 0
+        top: 0
 
     &__box
-        padding: 29px 0 40px 81px
+        padding: 45px 0 57px
         display: flex
         flex-direction: column
+        max-width: 650px
 
     &__title
         @include fontStyle(40px, 600, 120%)
@@ -24,11 +27,13 @@
         @include fontStyle(20px, 300, 130%)
         color: $color-black
         margin-bottom: 35px
+        max-width: 523px
 
     &__form
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 15px
+        max-width: 523px
 
         input
             padding: 16px 17px 14px 
@@ -58,9 +63,7 @@
     &__consent
         @include fontStyle(13px, 300, 20px)
         color: $color-black
-        margin-top: 10px
-        padding: 7px
-        margin-left: -40px
+        margin-top: 13px
 
     &__submit
         background: $color-main
@@ -75,15 +78,11 @@
         padding: 30px 0 25px
 
         &__left-img
-            width: 100%
-            height: 210px
-            border-top-right-radius: 10px
-            border-bottom-right-radius: unset
-            border-top-left-radius: 10px
-            float: none
+            display: none
 
         &__box
             padding: 31px 0 0
+            max-width: 100%
 
         &__title
             font-size: 26px
@@ -93,6 +92,7 @@
             font-size: 14px
             color: $color-black
             margin-bottom: 10px
+            max-width: 100%
 
         &__form
             grid-template-columns: repeat(2, 1fr)
@@ -133,3 +133,4 @@
             max-width: 240px
             height: fit-content
             padding: 14px 13px 14px 15px
+            

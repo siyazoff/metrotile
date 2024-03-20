@@ -8,14 +8,14 @@
     &__box
         margin-top: 33px
         display: grid
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(4, 1fr)
         gap: 30px
 
     &__item
         position: relative
         border-radius: 20px
-        padding: 46px 50px 43px
-        height: 460px
+        padding: 22px 
+        height: 346px
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -23,7 +23,7 @@
         overflow: hidden
 
         h2
-            @include fontStyle(30px, 600, 38px)
+            @include fontStyle(25px, 600, 120%)
             color: $color-white
             text-transform: uppercase
 
@@ -40,6 +40,7 @@
             object-fit: cover
             z-index: -1
             transition: transform .5s ease-in-out
+            object-position: left
         &:hover
             img
                 transform: scale(1.1)

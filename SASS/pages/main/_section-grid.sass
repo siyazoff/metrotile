@@ -24,6 +24,7 @@
             height: 100%
             object-fit: cover
             transition: all .3s ease
+            object-position: top
 
         &:first-child
             img
@@ -36,7 +37,7 @@
                 right: -122px
                 top: 20px
 
-        &:nth-child(3), &:last-child
+        &:nth-child(3), &:nth-child(4), &:last-child
             &::after
                 content: ''
                 position: absolute
@@ -49,6 +50,11 @@
 
             .section-grid__title
                 color: $color-white
+
+        &:last-child
+            grid-column: span 2
+            .section-grid__title
+                max-width: 100%
 
     &__title
         @include fontStyle(40px, 600, 53px)
@@ -86,14 +92,15 @@
                     max-width: 255px
                     heigh: 135px
 
-            &:nth-child(3), &:last-child
-                .section-grid__title
-                    color: $color-white
-
             &:nth-child(3)
                 order: 1
-            &:last-child
+            &:nth-child(4)
                 order: 3
+            &:last-child
+                order: 4
+                grid-column: unset
+
+            
                 
 
         &__title

@@ -1,186 +1,226 @@
 .section-news-home
     background-image: url("/src/img/section-news-home-1.webp")
 
+
 .section-news-page
-    padding: 90px 0 80px
+    padding: 90px 0 105px
 
     &__grid
         display: grid
-        grid-template-columns: repeat(3, 1fr)
-        column-gap: 40px
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 30px
+        row-gap: 55px
 
-    &__aside-wrapper
-        border-radius: 20px
-        overflow: hidden
-        height: 100%
-        max-height: 1050px
+    &__pagination
+        width: fit-content
+        display: flex
+        align-items: center
+        gap: 15px
+        margin-inline: auto
+        margin-top: 75px
+        a
+            color: #111010
+            font-size: 20px
+            font-weight: 400
+            line-height: 20px
+            text-transform: uppercase
 
-    &__aside
-        max-width: 410px
-        height: 100%
+.news-page-item
+    display: flex
+    flex-direction: column
+    height: auto
+
+    &__img
+        min-height: 190px
         width: 100%
-        background: #F5F5F5
-        overflow-y: scroll
-        scrollbar-width: thin
-        scrollbar-color: #04A756 #E1E1E1
+        object-fit: cover
+        border-radius: 10px
 
-        &::-webkit-scrollbar
-            width: 2px
+    &__content
+        display: flex
+        flex-direction: column
+        margin-top: 25px
+        min-height: 109px
+        height: 100%
 
-        &::-webkit-scrollbar-thumb
-            background: #04A756
-            border-radius: 20px
+    &__title
+        color: #444
+        font-size: 25px
+        font-weight: 600
+        line-height: 30px
+        text-transform: uppercase
 
-        &::-webkit-scrollbar-track
-            background: #E1E1E1
+    &__bottom
+        display: flex
+        justify-content: space-between
+        margin-top: auto
+    &__read
+        color: #555
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-transform: uppercase
+    &__date
+        color: #555
+        font-size: 16px
+        font-weight: 400
+        line-height: 20px
 
-    &__box
-        padding-top: 20px
-        grid-column: span 2
 
+.section-news-inner-banner
+    background: none
+    padding: 0
+    height: 620px
+    &::after
+        display: none
+
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+
+.section-news-inner
+    padding: 96px 0
     &__heading
-        margin-bottom: 45px
+        display: flex
+        flex-direction: column
+    &__title
+        color: #444
+        margin-top: 35px
+        margin-bottom: 25px
     &__date
         color: #666
-        font-size: 18px
+        font-size: 25px
         font-weight: 400
         line-height: 20px
         text-transform: uppercase
 
-    &__title
-        color: #151515
-        font-size: 28px
-        font-weight: 600
-        line-height: 64px
-        text-transform: uppercase
-
     &__content
-        display: grid
-        grid-template-columns: 488px 338px
-        column-gap: 13px
-        row-gap: 35px
-
+        margin-top: 25px
         p
-            grid-column: span 2
             color: #444
             font-size: 20px
             font-weight: 400
             line-height: 26px
+    &__share
+        margin-top: 80px
+        width: fit-content
+        display: flex
+        flex-direction: column
+        gap: 25px
+        margin-left: auto
+        h3
+            color: #444
+            font-size: 20px
+            font-weight: 700
+            line-height: 26px
+            text-transform: uppercase
 
-        img
-            border-radius: 10px
-            width: 100%
-            height: 324px
-            object-fit: cover
+    &__share-box
+        display: flex
+        align-items: center
+        gap: 14px
+        a
+            transition: transform 100ms ease-in
+            &:hover
+                transform: scale(1.07)
 
 
+.section-news-inner-recs
+    padding-bottom: 120px
+
+    &__heading
+        margin-bottom: 50px
+
+    &__box
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 30px
 
 
-.news-page-link-item
-    padding: 12px 10px
-    display: flex
-    gap: 17px
-
-    &__img
-        max-width: 93px
-        width: 100%
-        height: 80px
-        border-radius: 10px
-
-    span
-        color: #888
-        font-size: 12px
-        font-weight: 400
-        line-height: 24px
-
-    p
-        font-size: 16px
-        font-weight: 600
-        line-height: 22px
-        color: #444444
-
-    &.active
-        p
-            text-decoration-line: underline
-            color: #04A756
 
 
 
 @media all and (max-width: 768px)
     .section-news-page
-        padding: 45px 0 40px
+        padding: 40px 0 50px
 
         &__grid
             grid-template-columns: repeat(1, 1fr)
-            column-gap: 0
-            row-gap: 15px
+            column-gap: 0px
+            row-gap: 25px
 
-        &__aside-wrapper
-            border-radius: 7px
-            max-height: 600px
-            order: 1
+        &__pagination
+            gap: 10px
+            margin-top: 35px
+            a
+                font-size: 18px
+                line-height: 120%
 
-        &__aside
-            max-width: 100%
+    .news-page-item
+        &__img
+            min-height: auto
+            height: 150px
+            border-radius: 8px
 
-            &::-webkit-scrollbar
-                width: 1px
-
-        &__box
-            padding-top: 0
-            grid-column: unset
-
-        &__heading
-            margin-bottom: 25px
-
-        &__date
-            font-size: 12px
-            line-height: 120%
-            margin-bottom: 10px
+        &__content
+            margin-top: 15px
+            min-height: auto
+            height: auto
 
         &__title
+            font-size: 19px
+            line-height: 120%
+
+        &__bottom
+            margin-top: 15px
+
+        &__read
+            font-size: 14px
+            line-height: 120%
+        &__date
+            font-size: 14px
+            line-height: 120%
+
+
+
+    .section-news-inner-banner
+        height: 300px
+
+    .section-news-inner
+        padding: 40px 0
+        &__title
+            margin-top: 15px
+            margin-bottom: 10px
+
+        &__date
             font-size: 18px
             line-height: 120%
 
         &__content
-            grid-template-columns: 1fr
-            column-gap: 0
-            row-gap: 10px
-
+            margin-top: 15px
             p
-                grid-column: unset
-                font-size: 14px
+                font-size: 18px
                 line-height: 120%
+        &__share
+            margin-top: 40px
+            gap: 10px
+            
+            h3
+                font-size: 18px
+                line-height: 120%
+                text-align: end
 
-            img
-                border-radius: 7px
-                height: 150px
+        &__share-box
+            gap: 10px
 
+    .section-news-inner-recs
+        padding-bottom: 60px
+        
+        &__heading
+            margin-bottom: 20px
 
-
-
-    .news-page-link-item
-        padding: 6px 5px
-        display: flex
-        gap: 10px
-
-        &__img
-            max-width: 100px
-            height: auto
-            border-radius: 5px
-
-        p
-            font-size: 14px
-            font-weight: 600
-            line-height: 120%
-            color: #444444
-            display: -webkit-box
-            -webkit-box-orient: vertical
-            -webkit-line-clamp: 3
-            overflow: hidden
-
-        &.active
-            p
-                text-decoration-line: underline
-                color: #04A756
-
+        &__box
+            grid-template-columns: repeat(1, 1fr)
+            gap: 20px
