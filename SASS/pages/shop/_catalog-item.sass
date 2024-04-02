@@ -41,6 +41,22 @@
         .swiper-pagination-bullet-active
             opacity: 1
 
+    &__prev, &__next
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 99
+        left: 0
+        cursor: pointer
+        padding: 10px
+        user-select: none
+        display: flex
+    &__next
+        left: unset
+        right: 0
+        svg
+            transform: rotate(180deg)
+
     &__name
         @include fontStyle(17px, 600, normal)
         color: $color-black

@@ -4,10 +4,10 @@ const homeSwiper = new Swiper(".swiper-home", {
   spaceBetween: 0,
   speed: 500,
   effect: "fade",
-  // autoplay: {
-  //   delay: 3500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".section-home__pagination",
   },
@@ -182,6 +182,10 @@ const buildSwiperCatalog = (sliderElm) => {
 
     pagination: {
       el: `.catalog-item__pagination-${sliderIdentifier}`,
+    },
+    navigation: {
+      nextEl: `.catalog-item__next-${sliderIdentifier}`,
+      prevEl: `.catalog-item__prev-${sliderIdentifier}`,
     },
   });
 };

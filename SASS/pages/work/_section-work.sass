@@ -55,21 +55,21 @@
         &::after
             content: ''
             position: absolute
-            top: 0
+            bottom: 0
             left: 0
             width: 100%
-            height: 100%
+            height: 50%
             background: linear-gradient(0deg, #282828 0%, rgba(40, 40, 40, 0.00) 100%)
             z-index: -2
 
         &::before
             content: ''
             position: absolute
-            top: 0
+            bottom: 0
             left: 0
             width: 100%
-            height: 100%
-            background: linear-gradient(0deg, #04A756 -18.31%, rgba(4, 167, 106, 0.83) 35.72%, rgba(4, 167, 157, 0.40) 93.72%)
+            height: 50%
+            background: linear-gradient(0deg, #04A756 -18.31%, rgba(4, 167, 106, 0.83) 35.72%, rgba(4, 167, 157, 0.40) 70%, transparent 100%)
             z-index: -1
             transition: opacity .3s ease-in-out
             opacity: 0
@@ -115,7 +115,7 @@
             grid-column: span 5
 
     &__form
-        background-image: url("/src/img/section-work__form-1.webp")
+        background-image: url("/src/img/home-4.webp")
         margin-top: 95px
 
 
@@ -173,3 +173,4 @@
 
         &__form
             margin-top: 30px
+            background-image: unset
