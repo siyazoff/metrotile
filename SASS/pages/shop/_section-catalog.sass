@@ -8,6 +8,17 @@
         margin-top: 30px
         margin-bottom: 50px
         font-family: $noto-sans
+        overflow-x: scroll
+        width: 100%
+        padding-bottom: 7px
+        &::-webkit-scrollbar
+            height: 5px
+        &::-webkit-scrollbar-track
+            background: rgba(4, 167, 86, 0.1)
+            border-radius: 10px
+        &::-webkit-scrollbar-thumb
+            background: #04A756
+            border-radius: 10px
 
     &__tab
         padding: 18px 47px
@@ -15,6 +26,7 @@
         background: #04A7561A
         @include fontStyle(18px, 700, 24px)
         color: $color-main
+        flex-shrink: 0
 
         &.active
             background: $color-main
