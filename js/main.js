@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const shopping_cart = document.querySelector(".widget_cart");
     const cart_btns = document.querySelectorAll(".catalog-item__add-cart");
 
-    for (const cart_btn of cart_btns) {
+    cart_btns.forEach((cart_btn) => {
       cart_btn.onclick = (e) => {
         shopping_cart.classList.add("active");
 
@@ -202,11 +202,9 @@ document.addEventListener("DOMContentLoaded", function () {
         shopping_cart.setAttribute("data-product-count", product_count + 1);
 
         // finding first grand parent of target button
-        let target_parent = window.matchMedia("(max-width: 768px)").matches
-          ? e.target.parentNode.parentNode.parentNode
-          : e.target.parentNode.parentNode.parentNode.parentNode;
-        // let target_parent =
-        //   e.target.parentNode.parentNode.parentNode.parentNode;
+
+        let target_parent = e.target.closest(".catalog-item");
+        console.log(target_parent);
 
         target_parent.style.zIndex = "100";
         // Creating separate Image
@@ -243,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
           shopping_cart.classList.remove("active");
         }, 990);
       };
-    }
+    });
   }
 
   var modalForm = new tingle.modal({
@@ -302,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ".section-product__add-to-card"
     );
 
-    for (const cart_btn of cart_btns) {
+    cart_btns.forEach((cart_btn) => {
       cart_btn.onclick = (e) => {
         shopping_cart.classList.add("active");
 
@@ -311,11 +309,15 @@ document.addEventListener("DOMContentLoaded", function () {
         shopping_cart.setAttribute("data-product-count", product_count + 1);
 
         // finding first grand parent of target button
-        let target_parent = window.matchMedia("(max-width: 768px)").matches
-          ? e.target.parentNode.parentNode.parentNode
-          : e.target.parentNode.parentNode.parentNode.parentNode.querySelector(
-              ".section-product__left"
-            );
+        // let target_parent = window.matchMedia("(max-width: 768px)").matches
+        //   ? e.target.parentNode.parentNode.parentNode
+        //   : e.target.parentNode.parentNode.parentNode.parentNode.querySelector(
+        //       ".section-product__left"
+        //     );
+
+        let target_parent = e.target
+          .closest(".section-product__box")
+          .querySelector(".section-product__left");
         console.log(target_parent);
 
         target_parent.style.zIndex = "100";
@@ -353,6 +355,6 @@ document.addEventListener("DOMContentLoaded", function () {
           shopping_cart.classList.remove("active");
         }, 990);
       };
-    }
+    });
   }
 });
