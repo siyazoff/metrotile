@@ -3,6 +3,7 @@
     border: .5px solid #E5E5E5
     display: flex
     flex-direction: column
+    position: relative
 
     &__swiper
         height: 228px
@@ -96,12 +97,12 @@
     &__add-cart
         display: flex
         transition: transform .2s ease
-
-        &:hover
-            transform: scale(1.1)
-
-        &-mobile
+        cursor: pointer
+        &_mobile
             display: none
+
+        
+
 
     &__stock
         position: absolute
@@ -120,6 +121,16 @@
             font-family: $proximasoft
             color: $color-white
 
+@media (hover: hover)
+    .catalog-item__add-cart
+        &:hover
+            transform: scale(1.1)
+        &:active
+            transform: scale(1)
+@media (hover: none)
+    .catalog-item__add-cart
+        &:active
+            transform: scale(1.1)
 
 @media all and (max-width: 768px)
     .catalog-item
@@ -174,22 +185,24 @@
                     margin-top: 0
                     
         &__add-cart
-            display: none
-
-            &-mobile
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 5px
+            color: $color-white
+            font-size: 14px
+            font-weight: 700
+            letter-spacing: 0.24px
+            background: $color-main
+            padding: 8px
+            width: 100%
+            margin-top: 15px
+            border-radius: 10px
+            &_mobile
                 display: flex
-                align-items: center
-                justify-content: center
-                gap: 5px
-                color: $color-white
-                font-size: 14px
-                font-weight: 700
-                letter-spacing: 0.24px
-                background: $color-main
-                padding: 8px
-                width: 100%
-                margin-top: 15px
-                border-radius: 10px
+            &_desktop
+                display: none
+                
 
         &__stock
             top: 7px

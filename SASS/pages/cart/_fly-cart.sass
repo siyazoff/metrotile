@@ -1,0 +1,47 @@
+.flying-img
+    position: absolute
+    animation: fly_to_cart 1s infinite
+    border-radius: 60px
+
+@keyframes fly_to_cart
+    0%
+        left: 0
+        top: 0
+    45%, 50% 
+        left: var(--left)
+        top: 60px
+    
+    80%, 90% 
+        left: var(--left)
+        top: var(--top)
+        transform: scale(.2)
+    
+    100% 
+        left: calc(var(--left) + 40px)
+        top: var(--top)
+        transform: scale(.2)
+
+.flying-img-single
+    position: absolute
+    animation: fly_to_cart_single 1s infinite
+    border-radius: 60px
+    max-width: 555px
+    height: 555px
+
+@keyframes fly_to_cart_single
+    0%
+        left: 0
+        top: 0
+    45%, 50% 
+        left: var(--left)
+        top: 60px
+    
+    80%, 90% 
+        left: var(--left)
+        top: var(--top)
+        transform: scale(.07)
+    
+    100% 
+        left: calc(var(--left) + 40px)
+        top: var(--top)
+        transform: scale(.07)

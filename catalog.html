@@ -687,6 +687,22 @@
         </div>
       </div>
     </header>
+    <a href="cart.html" class="widget widget_cart" data-product-count="0">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="27"
+        height="22"
+        viewBox="0 0 27 22"
+        fill="none"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M26.1396 4.58549L23.4122 14.1225C23.2601 14.6898 22.6773 15.0265 22.1095 14.8744L22.0165 14.8493C23.0049 15.5409 23.6529 16.6858 23.6529 17.9836C23.6529 20.0959 21.9402 21.8082 19.8278 21.8082C17.7154 21.8082 16.0032 20.0959 16.0032 17.9836C16.0032 16.7843 16.556 15.7149 17.4198 15.0135H12.075C12.9386 15.7149 13.4916 16.7842 13.4916 17.9836C13.4916 20.0959 11.7794 21.8087 9.667 21.8087C7.55438 21.8087 5.84242 20.0964 5.84242 17.9836C5.84242 16.7843 6.39518 15.7149 7.25902 15.0135H6.92701C6.63094 15.0135 6.36415 14.8906 6.17266 14.6943C5.97601 14.5028 5.85345 14.236 5.85345 13.9399L5.85296 5.08708C5.85296 5.03417 5.86452 4.9847 5.87314 4.93424C5.84705 4.8417 5.82859 4.74621 5.82859 4.64556V4.22224C5.82859 4.13979 5.83991 4.0603 5.85788 3.98326C5.8409 3.53066 5.47124 3.16792 5.01418 3.16792H3.9751C3.96452 3.16816 3.95468 3.17112 3.94409 3.17112H1.81396C1.22551 3.17112 0.748047 2.69366 0.748047 2.1052V1.68188C0.748047 1.09343 1.2255 0.615967 1.81396 0.615967H3.94409C3.95049 0.615967 3.95615 0.61769 3.96206 0.61769H6.27232C7.44163 0.61769 8.38941 1.56547 8.38941 2.73478V3.15637H8.41377V5.71153H8.38596V12.4814H21.2301L23.1661 5.71153H11.8V5.69529C11.7879 5.69553 11.7771 5.69873 11.7651 5.69873C11.0639 5.69873 10.4958 5.13022 10.4958 4.42931C10.4958 3.72813 11.0643 3.15989 11.7651 3.15989C11.7771 3.15989 11.7879 3.16309 11.8 3.16334V3.1562H24.5194C24.6681 3.12962 24.8236 3.13183 24.9789 3.17343L25.388 3.2827C25.9552 3.43529 26.2915 4.01809 26.1394 4.58589L26.1396 4.58549ZM9.66634 16.7139C8.96516 16.7139 8.39692 17.2824 8.39692 17.9833C8.39692 18.6845 8.96544 19.2528 9.66634 19.2528C10.3675 19.2528 10.9356 18.6842 10.9356 17.9833C10.9353 17.2824 10.3673 16.7139 9.66634 16.7139ZM19.8284 16.7139C19.1272 16.7139 18.559 17.2824 18.559 17.9833C18.559 18.6845 19.1275 19.2528 19.8284 19.2528C20.5296 19.2528 21.0976 18.6842 21.0976 17.9833C21.0976 17.2824 20.5291 16.7139 19.8284 16.7139Z"
+          fill="white"
+        ></path>
+      </svg>
+    </a>
     <main class="main">
       <div class="breadcrumbs">
         <div class="container">
@@ -783,13 +799,16 @@
                   <h3>Цена за 1 кв. м:</h3>
                   <h3>от 17 742,90 тенге / кв м</h3>
                 </div>
-                <a href="#" class="catalog-item__add-cart">
+                <div class="catalog-item__add-cart">
+                  <span class="catalog-item__add-cart_mobile">В корзину</span>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="53"
                     height="53"
                     viewBox="0 0 53 53"
                     fill="none"
+                    class="catalog-item__add-cart_desktop"
                   >
                     <rect
                       x="0.179688"
@@ -836,15 +855,13 @@
                       fill="white"
                     />
                   </svg>
-                </a>
-                <a href="#" class="catalog-item__add-cart-mobile">
-                  <span>В корзину</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="17"
                     viewBox="0 0 18 17"
                     fill="none"
+                    class="catalog-item__add-cart_mobile"
                   >
                     <path
                       d="M8.81564 4.93373L3.75391 1"
@@ -871,9 +888,11 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                </a>
+                </div>
               </div>
             </div>
+            <!-- !catalog-item -->
+
             <!-- !catalog-item -->
             <div class="catalog-item">
               <div
@@ -914,13 +933,16 @@
                   <h3>Цена за 1 кв. м:</h3>
                   <h3>16 000 ₸/м2</h3>
                 </div>
-                <a href="#" class="catalog-item__add-cart">
+                <div class="catalog-item__add-cart">
+                  <span class="catalog-item__add-cart_mobile">В корзину</span>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="53"
                     height="53"
                     viewBox="0 0 53 53"
                     fill="none"
+                    class="catalog-item__add-cart_desktop"
                   >
                     <rect
                       x="0.179688"
@@ -967,15 +989,13 @@
                       fill="white"
                     />
                   </svg>
-                </a>
-                <a href="#" class="catalog-item__add-cart-mobile">
-                  <span>В корзину</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="17"
                     viewBox="0 0 18 17"
                     fill="none"
+                    class="catalog-item__add-cart_mobile"
                   >
                     <path
                       d="M8.81564 4.93373L3.75391 1"
@@ -1002,7 +1022,7 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                </a>
+                </div>
               </div>
             </div>
             <!-- !catalog-item -->
@@ -1045,13 +1065,16 @@
                   <h3>Цена за 1 кв. м:</h3>
                   <h3>16 000 ₸/м2</h3>
                 </div>
-                <a href="#" class="catalog-item__add-cart">
+                <div class="catalog-item__add-cart">
+                  <span class="catalog-item__add-cart_mobile">В корзину</span>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="53"
                     height="53"
                     viewBox="0 0 53 53"
                     fill="none"
+                    class="catalog-item__add-cart_desktop"
                   >
                     <rect
                       x="0.179688"
@@ -1098,15 +1121,13 @@
                       fill="white"
                     />
                   </svg>
-                </a>
-                <a href="#" class="catalog-item__add-cart-mobile">
-                  <span>В корзину</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="17"
                     viewBox="0 0 18 17"
                     fill="none"
+                    class="catalog-item__add-cart_mobile"
                   >
                     <path
                       d="M8.81564 4.93373L3.75391 1"
@@ -1133,7 +1154,7 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                </a>
+                </div>
               </div>
             </div>
             <!-- !catalog-item -->
@@ -1176,13 +1197,16 @@
                   <h3>Цена за 1 кв. м:</h3>
                   <h3>16 000 ₸/м2</h3>
                 </div>
-                <a href="#" class="catalog-item__add-cart">
+                <div class="catalog-item__add-cart">
+                  <span class="catalog-item__add-cart_mobile">В корзину</span>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="53"
                     height="53"
                     viewBox="0 0 53 53"
                     fill="none"
+                    class="catalog-item__add-cart_desktop"
                   >
                     <rect
                       x="0.179688"
@@ -1229,15 +1253,13 @@
                       fill="white"
                     />
                   </svg>
-                </a>
-                <a href="#" class="catalog-item__add-cart-mobile">
-                  <span>В корзину</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="17"
                     viewBox="0 0 18 17"
                     fill="none"
+                    class="catalog-item__add-cart_mobile"
                   >
                     <path
                       d="M8.81564 4.93373L3.75391 1"
@@ -1264,7 +1286,7 @@
                       stroke-linecap="round"
                     />
                   </svg>
-                </a>
+                </div>
               </div>
             </div>
             <!-- !catalog-item -->
