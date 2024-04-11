@@ -309,11 +309,6 @@ document.addEventListener("DOMContentLoaded", function () {
         shopping_cart.setAttribute("data-product-count", product_count + 1);
 
         // finding first grand parent of target button
-        // let target_parent = window.matchMedia("(max-width: 768px)").matches
-        //   ? e.target.parentNode.parentNode.parentNode
-        //   : e.target.parentNode.parentNode.parentNode.parentNode.querySelector(
-        //       ".section-product__left"
-        //     );
 
         let target_parent = e.target
           .closest(".section-product__box")
