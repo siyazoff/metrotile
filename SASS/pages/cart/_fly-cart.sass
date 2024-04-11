@@ -1,7 +1,11 @@
 .flying-img
     position: absolute
-    animation: fly_to_cart 1s infinite
+    animation: fly_to_cart 1s ease-in-out
     border-radius: 60px
+    will-change: left, top, transform
+    transition: all 1s
+    z-index: 999
+
 
 @keyframes fly_to_cart
     0%
@@ -23,10 +27,11 @@
 
 .flying-img-single
     position: absolute
-    animation: fly_to_cart_single 1s infinite
+    animation: fly_to_cart_single 1s ease-in-out
     border-radius: 60px
-    max-width: 555px
-    height: 555px
+    max-width: 300px
+    height: 300px
+    z-index: 999
 
 @keyframes fly_to_cart_single
     0%
@@ -34,7 +39,7 @@
         top: 0
     45%, 50% 
         left: var(--left)
-        top: 60px
+        top: 40px
     
     80%, 90% 
         left: var(--left)
