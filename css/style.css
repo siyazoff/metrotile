@@ -3429,6 +3429,17 @@ main.main {
     font-size: 12px;
   }
 }
+@media all and (max-width: 390px) {
+  .catalog-item__parametr {
+    font-size: 12px;
+  }
+  .catalog-item__price h3:nth-child(1), .catalog-item__price h3:nth-child(3) {
+    font-size: 12px;
+  }
+  .catalog-item__price h3:nth-child(2), .catalog-item__price h3:nth-child(4) {
+    font-size: 14px;
+  }
+}
 .section-product {
   padding-bottom: 91px;
 }
@@ -3444,6 +3455,7 @@ main.main {
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 42px;
   position: relative;
+  margin-top: 20px;
 }
 .section-product__left {
   width: 100%;
