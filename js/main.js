@@ -244,55 +244,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  var modalForm = new tingle.modal({
-    onClose: function () {
-      modalForm.setContent("");
-    },
-    closeLabel: "Закрыть",
-  });
+  // var modalForm = new tingle.modal({
+  //   onClose: function () {
+  //     modalForm.setContent("");
+  //   },
+  //   closeLabel: "Закрыть",
+  // });
 
-  var modalFormBtn = document.querySelectorAll(".modal-form__caller");
+  // var modalFormBtn = document.querySelectorAll(".modal-form__caller");
 
-  modalFormBtn.forEach((el) => {
-    el.addEventListener("click", function () {
-      var modalContent = document.querySelector(".modal-form").cloneNode(true);
-      modalContent.style.display = "block";
-      modalForm.setContent(modalContent.innerHTML);
+  // modalFormBtn.forEach((el) => {
+  //   el.addEventListener("click", function () {
+  //     var modalContent = document.querySelector(".modal-form").cloneNode(true);
+  //     modalContent.style.display = "block";
+  //     modalForm.setContent(modalContent.innerHTML);
 
-      modalForm.open();
-      document
-        .querySelector(".tingle-modal .modal-form__close-btn")
-        .addEventListener("click", function () {
-          modalForm.close();
-        });
-    });
-  });
+  //     modalForm.open();
+  //     document
+  //       .querySelector(".tingle-modal .modal-form__close-btn")
+  //       .addEventListener("click", function () {
+  //         modalForm.close();
+  //       });
+  //   });
+  // });
 
-  var modalFormThx = new tingle.modal({
-    onClose: function () {
-      modalFormThx.setContent("");
-    },
-    closeLabel: "Закрыть",
-  });
+  // var modalFormThx = new tingle.modal({
+  //   onClose: function () {
+  //     modalFormThx.setContent("");
+  //   },
+  //   closeLabel: "Закрыть",
+  // });
 
-  var modalThxBtn = document.querySelectorAll(".modal-form-thx__caller");
+  // var modalThxBtn = document.querySelectorAll(".modal-form-thx__caller");
 
-  modalThxBtn.forEach((el) => {
-    el.addEventListener("click", function () {
-      var modalContent = document
-        .querySelector(".modal-form-thx")
-        .cloneNode(true);
-      modalContent.style.display = "block";
-      modalFormThx.setContent(modalContent.innerHTML);
+  // modalThxBtn.forEach((el) => {
+  //   el.addEventListener("click", function () {
+  //     var modalContent = document
+  //       .querySelector(".modal-form-thx")
+  //       .cloneNode(true);
+  //     modalContent.style.display = "block";
+  //     modalFormThx.setContent(modalContent.innerHTML);
 
-      modalFormThx.open();
-      document
-        .querySelector(".tingle-modal .modal-form-thx__close-btn")
-        .addEventListener("click", function () {
-          modalFormThx.close();
-        });
-    });
-  });
+  //     modalFormThx.open();
+  //     document
+  //       .querySelector(".tingle-modal .modal-form-thx__close-btn")
+  //       .addEventListener("click", function () {
+  //         modalFormThx.close();
+  //       });
+  //   });
+  // });
 
   if (window.location.pathname.includes("single")) {
     const shopping_cart = document.querySelector(".widget_cart");
