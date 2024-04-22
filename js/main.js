@@ -244,56 +244,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // var modalForm = new tingle.modal({
-  //   onClose: function () {
-  //     modalForm.setContent("");
-  //   },
-  //   closeLabel: "Закрыть",
-  // });
-
-  // var modalFormBtn = document.querySelectorAll(".modal-form__caller");
-
-  // modalFormBtn.forEach((el) => {
-  //   el.addEventListener("click", function () {
-  //     var modalContent = document.querySelector(".modal-form").cloneNode(true);
-  //     modalContent.style.display = "block";
-  //     modalForm.setContent(modalContent.innerHTML);
-
-  //     modalForm.open();
-  //     document
-  //       .querySelector(".tingle-modal .modal-form__close-btn")
-  //       .addEventListener("click", function () {
-  //         modalForm.close();
-  //       });
-  //   });
-  // });
-
-  // var modalFormThx = new tingle.modal({
-  //   onClose: function () {
-  //     modalFormThx.setContent("");
-  //   },
-  //   closeLabel: "Закрыть",
-  // });
-
-  // var modalThxBtn = document.querySelectorAll(".modal-form-thx__caller");
-
-  // modalThxBtn.forEach((el) => {
-  //   el.addEventListener("click", function () {
-  //     var modalContent = document
-  //       .querySelector(".modal-form-thx")
-  //       .cloneNode(true);
-  //     modalContent.style.display = "block";
-  //     modalFormThx.setContent(modalContent.innerHTML);
-
-  //     modalFormThx.open();
-  //     document
-  //       .querySelector(".tingle-modal .modal-form-thx__close-btn")
-  //       .addEventListener("click", function () {
-  //         modalFormThx.close();
-  //       });
-  //   });
-  // });
-
   if (window.location.pathname.includes("single")) {
     const shopping_cart = document.querySelector(".widget_cart");
     const cart_btns = document.querySelectorAll(
@@ -352,4 +302,44 @@ document.addEventListener("DOMContentLoaded", function () {
       };
     });
   }
+
+  // Функция для добавления обработчиков открытия и закрытия модалок
+  function setupModalTriggers(openButtons, modalElements, closeButtonSelector) {
+    openButtons.forEach((button) => {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        modalElements.forEach((modal) => {
+          modal.classList.add("is_active");
+        });
+      });
+    });
+
+    modalElements.forEach((modal) => {
+      const close = modal.querySelector(closeButtonSelector);
+      close.addEventListener("click", function () {
+        modal.classList.remove("is_active");
+      });
+    });
+  }
+
+  // Инициализация модалок
+  const modalCallers = document.querySelectorAll(".modal-form__caller");
+  const modals = document.querySelectorAll(".modal-main");
+  setupModalTriggers(modalCallers, modals, ".modal-form__close-btn");
+
+  const modalThxCallers = document.querySelectorAll(".modal-form-thx__caller");
+  const modalThxs = document.querySelectorAll(".modal-thx");
+  setupModalTriggers(modalThxCallers, modalThxs, ".modal-form-thx__close-btn");
+
+  document.addEventListener("click", function (event) {
+    if (
+      !event.target.closest(
+        ".modal-form, .modal-form__caller, .modal-form-thx__caller "
+      )
+    ) {
+      document.querySelectorAll(".modal").forEach(function (modal) {
+        modal.classList.remove("is_active");
+      });
+    }
+  });
 });
