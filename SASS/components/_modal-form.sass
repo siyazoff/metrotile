@@ -13,8 +13,14 @@
     display: none
     overflow-y: scroll
     cursor: url("data:image/svg+xml,%3Csvg width='19' height='19' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.514.535l-6.42 6.42L2.677.536a1.517 1.517 0 00-2.14 0 1.517 1.517 0 000 2.14l6.42 6.419-6.42 6.419a1.517 1.517 0 000 2.14 1.517 1.517 0 002.14 0l6.419-6.42 6.419 6.42a1.517 1.517 0 002.14 0 1.517 1.517 0 000-2.14l-6.42-6.42 6.42-6.418a1.517 1.517 0 000-2.14 1.516 1.516 0 00-2.14 0z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/svg%3E"),auto
+    visibility: hidden
     &.is_active
         display: flex
+        visibility: visible
+        .modal-form
+            animation: scaleModal .2s cubic-bezier(.68, -.55, .265, 1.55) forwards
+
+
     
 .modal-form
     position: relative
@@ -26,11 +32,13 @@
     margin-top: auto
     margin-bottom: auto
     cursor: auto
+    will-change: scale, opacity, transform
     
     &__inner
         position: relative
         padding: 89px 77px 89px
         max-width: 681px
+       
 
     &__close-btn
         position: absolute
@@ -148,3 +156,14 @@
 
         &__subtitle
             margin-bottom: 20px
+
+
+// keyframes
+
+@keyframes scaleModal
+    0%
+        opacity: 0
+        transform: scale(.9)
+    100%
+        opacity: 1
+        transform: scale(1)
